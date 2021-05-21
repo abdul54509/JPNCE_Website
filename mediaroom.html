@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet'
+        href='https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/css/stylesheet.css'>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+
+    </script>
+    <title>MEDIA ROOM</title>
+
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+            $('#jpncenavbar').load('navbar.html');
+        });
+    </script>
+
+    <style>
+        .img1 {
+            transform: rotate(7deg);
+            border: 0.5em solid #f4f4f4;
+            box-shadow: 0.5em 0.5em 0.5em #ccc;
+        }
+
+
+        .img2 {
+            transform: rotate(-8deg);
+            border: 0.5em solid #f4f4f4;
+            box-shadow: 0.5em 0.5em 0.5em #ccc;
+        }
+
+        .img3 {
+            transform: rotate(7deg);
+            border: 0.5em solid #f4f4f4;
+            box-shadow: 0.5em 0.5em 0.5em #ccc;
+        }
+
+        .img4 {
+            transform: rotate(-8deg);
+            border: 0.5em solid #f4f4f4;
+            box-shadow: 0.5em 0.5em 0.5em #ccc;
+        }
+
+        .img5 {
+            transform: rotate(7deg);
+            border: 0.5em solid #f4f4f4;
+            box-shadow: 0.5em 0.5em 0.5em #ccc;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        p {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            transition: color 150ms;
+            color: #95a5a6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #7f8c8d;
+            text-decoration: underline;
+        }
+
+        .contain {
+            width: 100%;
+            padding-top: 50px;
+        }
+
+        #row {
+            overflow: scroll;
+            width: 100%;
+        }
+
+        .row__inner {
+            transition: 450ms transform;
+            font-size: 0;
+            white-space: nowrap;
+            margin: 70.3125px 0;
+            padding-bottom: 10px;
+        }
+
+        .tile {
+            position: relative;
+            display: inline-block;
+            width: 250px;
+            height: 140.625px;
+            margin-right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 450ms all;
+            transform-origin: center left;
+        }
+
+        .tile__img {
+            width: 250px;
+            height: 140.625px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .tile__details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            font-size: 10px;
+            opacity: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+            transition: 450ms opacity;
+        }
+
+        .tile__details:after,
+        .tile__details:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: #000;
+        }
+
+        .tile__details:after {
+            margin-top: -25px;
+            margin-left: -25px;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #ecf0f1;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+
+        .tile__title {
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+        }
+
+        .row__inner:hover {
+            transform: translate3d(-62.5px, 0, 0);
+        }
+
+        .row__inner:hover .tile {
+            opacity: 0.3;
+        }
+
+        .row__inner:hover .tile:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+
+        .tile:hover~.tile {
+            transform: translate3d(125px, 0, 0);
+        }
+
+
+        .separator {
+            margin-top: 0px;
+        }
+
+        .twitter {
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 4px;
+            background: #00ACED;
+            display: inline-block;
+            padding: 10px 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* 3D Cube */
+        .space3d {
+            perspective: 1000px;
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        ._3dbox {
+            display: inline-block;
+            transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(-15deg) rotateY(15deg);
+        }
+
+        ._3dface {
+            overflow: hidden;
+            position: absolute;
+            border: 1px solid #888;
+            background: #FFF;
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+            color: #333;
+            line-height: 250px;
+            opacity: 3.5;
+        }
+
+        ._3dface--front {
+            width: 250px;
+            height: 250px;
+            transform: translate3d(0, 0, 125px);
+        }
+
+        ._3dface--top {
+            width: 250px;
+            height: 250px;
+            transform: rotateX(90deg) translate3d(0, 0, 125px);
+        }
+
+        ._3dface--bottom {
+            width: 250px;
+            height: 250px;
+            transform: rotateX(-90deg) translate3d(0, 0, 125px);
+        }
+
+        ._3dface--left {
+            width: 250px;
+            height: 250px;
+            left: 50%;
+            margin-left: -125px;
+            transform: rotateY(-90deg) translate3d(0, 0, 125px);
+        }
+
+        ._3dface--right {
+            width: 250px;
+            height: 250px;
+            left: 50%;
+            margin-left: -125px;
+            transform: rotateY(90deg) translate3d(0, 0, 125px);
+        }
+
+        ._3dface--back {
+            width: 250px;
+            height: 250px;
+            transform: rotateY(180deg) translate3d(0, 0, 125px);
+        }
+
+        #radio-left:checked~.space3d ._3dbox {
+            transform: rotateY(90deg);
+        }
+
+        #radio-right:checked~.space3d ._3dbox {
+            transform: rotateY(-90deg);
+        }
+
+        #radio-bottom:checked~.space3d ._3dbox {
+            transform: rotateX(90deg);
+        }
+
+        #radio-top:checked~.space3d ._3dbox {
+            transform: rotateX(-90deg);
+        }
+
+        #radio-back:checked~.space3d ._3dbox {
+            transform: rotateY(180deg);
+        }
+
+        ._3dface--front {
+            background: url(Assets/jp1.jpg);
+            background-size: 100%;
+        }
+
+        ._3dface--left {
+            background: url(Assets/jp3.jpg);
+            background-size: auto 100%;
+        }
+
+        ._3dface--right {
+            background: url(Assets/jp.jpg);
+            background-size: auto 100%;
+        }
+
+        ._3dface--top {
+            background: url(https://3.bp.blogspot.com/-mySu8dy4ux4/ULiVKS4YBbI/AAAAAAAAAR0/vBMi_4dAPDE/s400/rajiv+dixit+s.jpg);
+            background-size: auto 100%;
+        }
+
+        ._3dface--bottom {
+            background: url(https://2.bp.blogspot.com/-B9QWFtc9bVY/UHFs7y9GqkI/AAAAAAAAARI/YLDkoHYr3g4/s400/Gau+wm.jpg);
+            background-size: auto 100%;
+        }
+
+        ._3dface--back {
+            background: url(https://3.bp.blogspot.com/-ofufG97PpiU/UBzXu-1AisI/AAAAAAAAAP0/iDnhOh-vrb8/s400/shiv+ji.jpg);
+            background-size: auto 100%;
+        }
+
+
+
+        div#background {
+            height: 700px;
+            width: 100%;
+            background-image: url(http://garchitecture.ca/php/images/headers/wood.jpg);
+            padding-top: 20px;
+        }
+
+        div#gallery {
+            width: 800px;
+            margin: auto;
+        }
+
+
+        #background img {
+            height: 150px;
+            margin: 0px;
+        }
+
+        #background figure {
+            float: left;
+            position: relative;
+            background-color: white;
+            text-align: center;
+            font-size: 15px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 1px 2px 3px black;
+        }
+
+        figure.pic1 {
+            -webkit-transform: rotate(-10deg);
+            z-index: 1;
+        }
+
+        figure.pic2 {
+            -webkit-transform: rotate(15deg);
+            z-index: 2;
+        }
+
+        figure.pic3 {
+            -webkit-transform: rotate(-25deg);
+            z-index: 1;
+        }
+
+        figure.pic4 {
+            -webkit-transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        figure.pic5 {
+            -webkit-transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        figure.pic6 {
+            -webkit-transform: rotate(-8deg);
+            z-index: 1;
+        }
+
+        figure.pic7 {
+            -webkit-transform: rotate(2deg);
+            z-index: 1;
+        }
+
+        figure.pic8 {
+            -webkit-transform: rotate(-13deg);
+            z-index: 1;
+        }
+
+        figure.pic9 {
+            -webkit-transform: rotate(-7deg);
+            z-index: 1;
+        }
+
+        figure.pic10 {
+            -webkit-transform: rotate(2deg);
+            z-index: 1;
+        }
+
+        figure.pic11 {
+            -webkit-transform: rotate(-3deg);
+            z-index: 1;
+        }
+
+        #background figure:hover {
+            box-shadow: 5px 10px 100px black;
+            -webkit-transform: scale(1.1, 1.1);
+            z-index: 20;
+        }
+
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div id="cssmenu" class="mt-4" align="left">
+                <ul>
+                    <li class="active"><a href="http://jpnce.epizy.com/mediaroom.html">JPNCE GALLERY</a></li>
+                    <li><a href="http://jpnce.epizy.com">HOME</a></li>
+                </ul>
+            </div>
+
+
+            <div class="w3-content w3-section" style="max-width:500px">
+                <h3> JAYAPRAKASH NARAYAN COLLEGE <br>OF ENGINEERING</h3><br>
+
+                <!-- CONTROLS -->
+                <center>
+                    <input type="radio" checked id="radio-front" name="select-face" />
+                    <input type="radio" id="radio-left" name="select-face" />
+                    <input type="radio" id="radio-right" name="select-face" />
+                    <input type="radio" id="radio-top" name="select-face" />
+                    <input type="radio" id="radio-bottom" name="select-face" />
+                    <input type="radio" id="radio-back" name="select-face" />
+
+                    <div class="separator"></div>
+
+                    <div class="space3d">
+
+                        <div class="_3dbox">
+                            <div class="_3dface _3dface--front"></div>
+                            <div class="_3dface _3dface--top"></div>
+                            <div class="_3dface _3dface--bottom"></div>
+                            <div class="_3dface _3dface--left"></div>
+                            <div class="_3dface _3dface--right"></div>
+                            <div class="_3dface _3dface--back"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="separator"></div>
+                    <br><br>
+                </center>
+
+
+                <img class="mySlides w3-animate-fading" src="Assets/image.jfif" style="width:100%">
+                <img class="mySlides w3-animate-fading" src="Assets/image.jfif" style="width:100%">
+                <img class="mySlides w3-animate-fading" src="Assets/image.jfif" style="width:100%">
+                <img class="mySlides w3-animate-fading" src="Assets/image.jfif" style="width:100%">
+            </div>
+            <br><br>
+            <!--<div class="w3-container">
+  <h2>Slideshow Indicators</h2>
+  <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>
+</div>
+
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides" src="Assets/image.jfif" style="width:100%;display:none">
+  <img class="mySlides" src="Assets/image.jfif" style="width:100%">
+  <img class="mySlides" src="Assets/image.jfif" style="width:100%;display:none">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="Assets/image.jfif" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="Assets/image.jfif" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="Assets/image.jfif" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+  </div>
+</div>
+-->
+            <div class="container" padding-top="50px">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div><img class="img1" src="Assets/image.jfif">rkegliauguiuildhdhhid</div>
+                        <div><img class="img2" src="Assets/image.jfif">kkdavsnln</div>
+                        <div><img class="img3" src="Assets/image.jfif">jkfadb;abSA</div>
+                        <div><img class="img4" src="Assets/image.jfif">AJKSBD;I</div>
+                        <div><img class="img5" src="Assets/image.jfif">EFAEHJBL</div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div><img class="img1" src="Assets/image.jfif">rkegliauguiuildhdhhid</div>
+                        <div><img class="img2" src="Assets/image.jfif">kkdavsnln</div>
+                        <div><img class="img3" src="Assets/image.jfif">jkfadb;abSA</div>
+                        <div><img class="img4" src="Assets/image.jfif">AJKSBD;I</div>
+                        <div><img class="img5" src="Assets/image.jfif">EFAEHJBL</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+
+    <div class="contain">
+
+        <h1>JAYAPRAKASH NARAYAN COLLEGE OF ENGINEERING</h1>
+
+        <p>
+            Inspired by <a href="https://twitter.com/Eli_White">Eli White's</a> article <a
+                href="http://eng.wealthfront.com/2015/06/implementing-netflix-redesign.html">Performant CSS Animations:
+                Netflix Case Study</a>, his <a href="https://codepen.io/TheSavior/pen/LVeYBp">example pen</a>, and <a
+                href="http://matthewjamestaylor.com/">Matt Taylor's</a> <a
+                href="https://codepen.io/mattjamestaylor/pen/dodYPr">CSS-only version.</a>
+        </p>
+
+        <div id="row">
+            <div class="row__inner">
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-5.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-6.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-7.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-8.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-9.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-10.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-11.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-12.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-13.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-14.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-15.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-16.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-17.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-18.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile__media">
+                        <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-19.jpg"
+                            alt="" />
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+
+    <div id="background">
+        <div id="gallery">
+            <figure class="pic1">
+                <img src="https://31.media.tumblr.com/tumblr_mel7ujiRxo1qha057o1_1280.jpg" />
+                <figcaption>Summer 2014</figcaption>
+            </figure>
+            <figure class="pic2">
+                <img
+                    src="http://favim.com/orig/201107/03/art-desert-lo-fi-nature-neil-krug-photography-Favim.com-92907.jpg" />
+                <figcaption>Death valley</figcaption>
+            </figure>
+            <figure class="pic3">
+                <img
+                    src="http://cdn.c.photoshelter.com/img-get/I00003IZIy5yDWAE/s/880/880/Na-Mokulua-Five-Point-Sun-Rise.jpg" />
+                <figcaption>Early morning</figcaption>
+            </figure>
+            <figure class="pic4">
+                <img src="https://amp.businessinsider.com/images/507c71b8ecad048830000004-750-563.jpg" />
+                <figcaption>Lost.</figcaption>
+            </figure>
+            <figure class="pic5">
+                <img src="https://38.media.tumblr.com/tumblr_l8zzb3pezm1qdimp1o1_400.jpg" />
+                <figcaption>#Brooklyn</figcaption>
+            </figure>
+            <figure class="pic6">
+                <img src="http://www.adventure-journal.com/wp-content/uploads/2009/11/jackbrull01_470.jpg" />
+                <figcaption>Why now?</figcaption>
+            </figure>
+            <figure class="pic7">
+                <img src="http://www.webdesign.org/img_articles/22269/Sierra1.png" />
+                <figcaption>Verbier 10.08.2002</figcaption>
+            </figure>
+            <figure class="pic8">
+                <img src="http://media-cache-ak0.pinimg.com/236x/55/82/2d/55822d7c9855f4751051328681cde4c0.jpg" />
+                <figcaption>My temporary home</figcaption>
+            </figure>
+            <figure class="pic9">
+                <img src="http://suzannestackledotme.files.wordpress.com/2012/05/by-rustifari.jpg?w=700" />
+                <figcaption>Love</figcaption>
+            </figure>
+            <figure class="pic10">
+                <img src="https://33.media.tumblr.com/tumblr_lgidr1McXV1qdimp1o1_400.jpg" />
+                <figcaption>Torino 2013</figcaption>
+            </figure>
+            <figure class="pic11">
+                <img src="https://m1.behance.net/rendition/modules/4344109/disp/674ec054303b2c2e7e39527e2f8dd01b.jpg" />
+                <figcaption>Miss you..</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 9000);
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+
+
+
+
+</body>
+
+</html>

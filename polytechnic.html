@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+  </script>
+
+  <title>POLYTECHNIC</title>
+  <script>
+    $(function () {
+      $('#footer').load('footer.html');
+      $('#jpncenavbar').load('navbar.html');
+    });
+  </script>
+</head>
+
+<body>
+  <style>
+    .profile-head {
+      transform: translateY(5rem)
+    }
+
+    .cover {
+      background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .profile-card {
+      background-color: #222222;
+      margin-bottom: 0px;
+      margin-left: -15px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      position: absolute;
+      top: -65px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 1;
+      max-width: 100px;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+
+    .profile-info {
+      color: #BDBDBD;
+      padding: 30px;
+      padding-left: 40px;
+      position: relative;
+      margin-top: 15px;
+    }
+
+    .profile-info h2 {
+      color: #E8E8E8;
+      letter-spacing: 4px;
+      padding-bottom: 12px;
+    }
+
+    .profile-info span {
+      display: block;
+      font-size: 12px;
+      color: #4CB493;
+      letter-spacing: 2px;
+    }
+
+    .profile-info a {
+      color: #4CB493;
+    }
+
+    .profile-info i {
+      padding: 15px 35px 0px 35px;
+    }
+
+
+    .profile-card:hover .profile-pic {
+      transform: scale(1.1);
+    }
+
+    .profile-card:hover .profile-info hr {
+      opacity: 1;
+    }
+
+
+
+
+    /* Underline From Center */
+    .hvr-underline-from-center {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hvr-underline-from-center:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 52%;
+      right: 52%;
+      bottom: 0;
+      background: #FFFFFF;
+      border-radius: 50%;
+      height: 3px;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+    .profile-card:hover .hvr-underline-from-center:before,
+    .profile-card:focus .hvr-underline-from-center:before,
+    .profile-card:active .hvr-underline-from-center:before {
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #CECECE;
+      border-radius: 0;
+    }
+    #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+  </style>
+  <div id="jpncenavbar"></div>
+  <div class="container">
+      <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/polytechnic.html">2nd SHIFT POLYTECHNIC</a></li>
+                <li><a href="http://jpnce.epizy.com">HOME</a></li>
+            </ul>
+        </div>
+    <h1>POLYTECHNIC</h1>
+    <hr>
+    <div class="container">
+
+      <br>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">CIVIL DEPARTMENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">ELECTRONICS DEPARTMENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu2">ELECTRICAL DEPARTMENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu3">MECHANICAL DEPARTMENT</a>
+        </li>
+        
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+          <h4>FACULTY</h4>
+          <table class="table table-bordered">
+            <tr>
+              <td>DPT14CV001</td>
+              <td>Ms. Hafsa firdouse</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT15CV001</td>
+              <td>Mr. Md. Abrar Khan</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT15CV002</td>
+              <td>Mr. S. Devendra Naik</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT15CV003</td>
+              <td>
+                Ms. D. Ambika</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT16CV001</td>
+              <td>Mr. Bheemaiah</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT16CV002</td>
+              <td>Mr K. Parashuramudu</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT16CV003</td>
+              <td>Mr V. Naresh Kumar</td>
+              <td>Lecturer</td>
+            </tr>
+            <tr>
+              <td>DPT16CV004</td>
+              <td>Ms Fathima Begum</td>
+              <td>Lecturer</td>
+            </tr>
+          </table>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/polytechnic/background.jpg" width="100%" height="160">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/polytechnic/1.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">Fathima Begum<span>Lecturer</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              SBTET Faculty Reg-Id : 18528<br>
+              Qualifications : B.tech<br>
+              Experiences : 3 Years, 3 months<br>
+              E-Mail : arshiyafathima888@gmail.com<br>
+              Phone No: 8328244628<br>
+              <hr><b>Subjects Taught:</b>
+              Quantity surveying-I & II, Basic surveying,Levelling surveying
+              <hr><b>Area of
+                Interest:</b>
+                Qs, Surveying, Ds<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/polytechnic/background.jpg" width="100%" height="160">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/polytechnic/2.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">HAFSA FIRDOUS<span>Lecturer</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              Faculty Reg-Id: 18524<br>
+              Qualifications : B.tech<br>
+              Experiences : 3 Years<br>
+              E-Mail : firdouszoya23@gmail.com<br>
+              Phone No: 7013685405<br>
+              <hr><b>Subjects Taught:</b>
+              BMCP, IE, CTE,TE,EE
+              <hr><b>Area of
+                Interest:</b>
+                BMCP, RCS, CT&V<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/polytechnic/background.jpg" width="100%" height="160">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/polytechnic/3.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">G BHEEMAIAH<span>Lecturer</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              SBTET Faculty Reg-Id:18525<br>
+              Qualifications : B.tech<br>
+              Experiences : 3 Years<br>
+              E-Mail : bheemaraaganamoni@gmail.com<br>
+              Phone No: 9493000618<br>
+              <hr><b>Subjects Taught:</b>
+              QC&SC, Environmental Engg, HYDRAULICS, ENGG DRAWING, Strength of material, Transportation Engg and surveying.
+              <hr><b>Area of
+                Interest:</b>
+                Environmental Engg, Hydraulics and Strength of material.<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/polytechnic/background.jpg" width="100%" height="160">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/polytechnic/4.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">Kuruva Parashuramudu<span>Lecturer</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              SBTET Faculty Reg-Id:18530<br>
+              Qualifications : B.tech<br>
+              Experiences : 4Years, 2 months<br>
+              E-Mail : ramudu119@gmail.com<br>
+              Phone No: 9182511025<br>
+              <hr><b>Subjects Taught:</b>
+              Engineering Drawing,Engineering mechanics,strength of metirials,construction practice,Theory of structures
+              <hr><b>Area of
+                Interest:</b>
+                Qs, Surveying, Strength of material, Quantity surveying<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/polytechnic/background.jpg" width="100%" height="160">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/polytechnic/5.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">M vinod kumar<span>Lecturer</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              SBTET Faculty Reg-Id: 19001<br>
+              Qualifications : B.tech<br>
+              Experiences : 1 Years<br>
+              E-Mail : kumar1vinod1007@gmail.com<br>
+              Phone No: 9490849066<br>
+              <hr><b>Subjects Taught:</b>
+              Building Drawing
+              <hr><b>Area of
+                Interest:</b>
+                Building Drawing<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/polytechnic/background.jpg" width="100%" height="160">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/polytechnic/6.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">CIKKONDRA SRIKANT<span>Lecturer</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              SBTET faculty Rag-Id:19263<br>
+              Qualifications : B.tech<br>
+              Experiences : 10 Months<br>
+              E-Mail : chikkondrasrikanth@gmail.com<br>
+              Phone No: 9121830644<br>
+              <hr><b>Subjects Taught:</b>
+              SURVEYING, IRRIGATION
+              <hr><b>Area of
+                Interest:</b>
+                TRANSPORTATION ENGINEERING, SURVEYING,BMCP, IRRIGATION ENGG<br><br></div>
+          </div>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+          
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+          
+        </div>
+        <div id="menu3" class="container tab-pane fade"><br>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

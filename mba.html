@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+  </script>
+
+  <title>MBA</title>
+  <script>
+    $(function () {
+      $('#footer').load('footer.html');
+      $('#jpncenavbar').load('navbar.html');
+    });
+  </script>
+</head>
+
+<body>
+  <style>
+    .profile-head {
+      transform: translateY(5rem)
+    }
+
+    .cover {
+      background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .profile-card {
+      background-color: #222222;
+      margin-bottom: 0px;
+      margin-left: -15px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      position: absolute;
+      top: -65px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 1;
+      max-width: 100px;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+
+    .profile-info {
+      color: #BDBDBD;
+      padding: 30px;
+      padding-left: 40px;
+      position: relative;
+      margin-top: 15px;
+    }
+
+    .profile-info h2 {
+      color: #E8E8E8;
+      letter-spacing: 4px;
+      padding-bottom: 12px;
+    }
+
+    .profile-info span {
+      display: block;
+      font-size: 12px;
+      color: #4CB493;
+      letter-spacing: 2px;
+    }
+
+    .profile-info a {
+      color: #4CB493;
+    }
+
+    .profile-info i {
+      padding: 15px 35px 0px 35px;
+    }
+
+
+    .profile-card:hover .profile-pic {
+      transform: scale(1.1);
+    }
+
+    .profile-card:hover .profile-info hr {
+      opacity: 1;
+    }
+
+
+
+
+    /* Underline From Center */
+    .hvr-underline-from-center {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hvr-underline-from-center:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 52%;
+      right: 52%;
+      bottom: 0;
+      background: #FFFFFF;
+      border-radius: 50%;
+      height: 3px;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+    .profile-card:hover .hvr-underline-from-center:before,
+    .profile-card:focus .hvr-underline-from-center:before,
+    .profile-card:active .hvr-underline-from-center:before {
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #CECECE;
+      border-radius: 0;
+    }
+    #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+  </style>
+  <div id="jpncenavbar"></div>
+  <div class="container">
+      <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/mba.html">MASTER OF BUSINESS ADMINISTRATION</a></li>
+                <li><a href="http://jpnce.epizy.com">HOME</a></li>
+            </ul>
+        </div>
+    <h1>MASTER OF BUSINESS ADMINISTRATION</h1>
+    <hr>
+    <div class="container">
+
+      <br>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">DEPARTMENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">HOD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu2">FACULTY & STAFF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu3">LABS & INFRASTRUCTURE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu4">EVENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu5">ACHIEVEMENTS/PLACEMENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu6">SYLLABUS</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+          <h3>DEPARTMENT</h3>
+          <p>Engineers often become the prime managers of change within a business. Having already obtained a technical
+            degree Or a General Degree young Graduates can speedily progress in their careers if they methodically study
+            the aspects of management.<br><br>Realizing this fact, JAYA PRAKASH NARAYAN COLLEGE OF ENGINEERING
+            established the department of MASTER OF BUSINESS ADMINISTRATION in 2006 with an intake of 60
+            students.<br><br>The department is headed by Dr. M.Madhu Mohan with vast Corporate and teaching
+            experience.<br><br>Three electives are being offered to prepare students to meet the market demands, viz.,
+            Finance, Human Resource Management, and Marketing.<br><br>Various activities like seminars, group
+            discussions, debates, case studies, Business quiz, Mock interviews and classroom participation form part of
+            the motivated diplomacy envisage for these escalating managers.</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+          <div class="row py-5 px-4">
+            <div class="col mx-auto">
+              <!-- Profile widget -->
+              <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 cover">
+                  <div class="media align-items-end profile-head">
+                    <div class="profile mr-3"><img src="Assets/mbahod.jpg" alt="..." width="130"
+                        class="rounded mb-2 img-thumbnail img-circle"></div>
+                    <div class="media-body mb-5 text-white">
+                      <h4 class="mt-0 mb-0">Dr.M.Madhu Mohan</h4>
+                      <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>HEAD OF THE DEPARTMENT</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-light p-4 d-flex justify-content-end text-center">
+
+                </div>
+                <div class="px-4 py-3">
+                  <h5 class="mb-0">About</h5>
+                  <div class="p-4 rounded shadow-sm bg-light mt-2">
+                    <pre>
+JNTUH ID           : 76150406-143139<br>
+Designation        : HEAD OF THE DEPARTMENT<br>
+Years of Experience: 13<br>
+Email              : madhu.9.mohan@gmail.com<br>
+Phone              : 9866696913/8886680007
+                  </pre>
+                  </div>
+                </div>
+                <div class="px-4 py-3">
+                  <h5 class="mb-0">Qualification:</h5>
+                  <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                    Ph.D. in Marketing, 2019 – Effective Critical Analysis of City Branding Ventures in India, JJT
+                    University, Rajasthan. PG Degree in MBA, 2006, OU P.G COLLEGE, MAHABUBNAGAR, Osmania University,
+                    Hyderabad. UG Degree in B.Com 2003, MVS College, MAHABUBNAGAR.
+                  </div>
+                </div>
+                <div class="px-4 py-3">
+                  <h5 class="mb-0">Subjects Taught:</h5>
+                  <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                    Logistics & Supply chain Management, Financial Institutions Markets & Services, Banking Insurance &
+                    Risk Management, Rural Marketing, International Business, Consumer Behavior, Production & Operations
+                    Management, Business Ethics & Corporate Governance, and Cross Cultural Management.
+                  </div>
+                </div>
+                <div class="px-4 py-3">
+                  <h5 class="mb-0">Areas of Specialization:</h5>
+                  <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                    Marketing & HR
+                  </div>
+                </div>
+                <div class="px-4 py-3">
+                  <h5 class="mb-0">DETAILS OF CONFERENCES/SEMINARS/WORKSHOPS/PAPERS :</h5>
+                  <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                    <table class="table table-bordered">
+                      <tr>
+                        <th>YEAR</th>
+                        <th>CONFERENCES/SEMINARS/WORKSHOPS ATTENDED</th>
+                        <th>TITLE OF PAPER PRESENTED/JOURNAL</th>
+                      </tr>
+                      <tr>
+                        <td>Sep,2011</td>
+                        <td></td>
+                        <td>Supply Chain Performance Improvement<br>
+
+                          Indian Journal Of Commerce & Management Studies<br>
+
+                          Volume – II;Issue-6;ISSN: 2249-0310</td>
+                      </tr>
+                      <tr>
+                        <td>Mar,2012</td>
+                        <td>One Day FDP
+
+                          Management Teacher 2015 – New Age Teacher
+
+                          Organized by (AIMS)</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Mar,2012</td>
+                        <td></td>
+                        <td>A Study On Problems & Prospects Of Farmers in Cultivation of Paddy in MBNR District ; A.P
+
+                          Indian Journal Of Applied Research
+
+                          Volume – I; Issue – 6
+
+                          ISSN – 2249-555X</td>
+                      </tr>
+                      <tr>
+                        <td>Dec,2012</td>
+                        <td></td>
+                        <td>Pricing Strategies – In Retail Sector
+
+                          International Journal Of Scientific Research
+
+                          Volume – I; Issue – 7
+
+                          ISSN: 2277-8179</td>
+                      </tr>
+                      <tr>
+                        <td>Jan,2014</td>
+                        <td>Two Days National Conference on Behavioral Finance
+
+                          Sponsored by ICSSR, New Delhi
+
+                          Held at JNTUHS</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Aug,2014</td>
+                        <td>1 Day National Seminar on Entrepreneurship Development
+
+                          In Association with (NFED)
+
+                          Held at JPNCE</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>June,2015</td>
+                        <td>1 Day FDP
+
+                          Held at JPNCE</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>June,2016</td>
+                        <td></td>
+                        <td>Pricing Strategies in Current Retail sector
+
+                          Presented Article in
+
+                          National Conference on
+
+                          Role of Research for Sustainable Development.
+
+                          Organized by SHRI JJTU</td>
+                      </tr>
+                      <tr>
+                        <td>Oct,2016</td>
+                        <td>National Conference on
+
+                          Smart Cities Prospects Challenges & Impact on Rural India(JJTU, Rajasthan)</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>June,2017</td>
+                        <td></td>
+                        <td>The Growth And Transform In City Branding: A Content Analysis Of The Prose
+
+                          Inter Continental Journal Of Marketing Research Review
+
+                          Volume5, Issue 6,
+
+                          ISSN:2321-0346- Online
+
+                          ISSN: 2347-1670 – Print</td>
+                      </tr>
+                      <tr>
+                        <td>2017</td>
+                        <td></td>
+                        <td>City Branding : Key Ventures And Initiatives For Escalation On Assorted Perspectives
+
+                          International Journal Of Current Engineering & Scientific Research (IJCESR)
+
+                          Volume – 4, Issue 8
+
+                          ISSN : 2393 – 8374 (Print)
+
+                          ISSN : 2394 – 0697 (Online)</td>
+                      </tr>
+                      <tr>
+                        <td>July,2017</td>
+                        <td></td>
+                        <td>
+                          Initiatives and Effective Analytics On City Branding Ventures
+
+                          Research Revolution (RR)
+
+                          Volume – 5, Issue – 10
+
+                          ISSN : 2319 – 300X</td>
+                      </tr>
+                      <tr>
+                        <td>Mar,3rd & 4th,2018</td>
+                        <td>Participated in 2 days FDP on Assessment & Evaluation by TLC,at IIT,Hyderabad</td>
+                        <td></td>
+                      </tr>
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mbahod.jpg" width="100px" height="100px">
+
+                  <h5 class="hvr-underline-from-center mt-4">Dr.M.Madhu Mohan<span>HOD-Asst.professor</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+
+              JNTUH REG ID : 76150406-143139<br>
+              Qualification : MBA; Ph.D.<br>
+              Experience : 13 Years<br>
+              Contact : madhu.9.mohan@gmail.com
+              <hr><b>Subjects Taught:</b>
+              BUSINESS ENVIRONMENT, LOGISTICS & SUPPLY CHAIN MANAGEMENT, CROSS CULTURAL MANAGEMENT, FIMS,
+              INTERNATIONAL MARKETING, POM, INTERNATIONAL BUSINESS, RM, ADVERTSING & SALES MANAGEMENT
+              <hr><b>Area of
+                Interest:</b>
+              MARKETING & FINANCE<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mba/saritha.jpg" height="100"width="100">
+
+                  <h5 class="hvr-underline-from-center mt-4">P.Sareeta<span>Asst.professor</span></h5>
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-8"><br>
+              JNTUH REG ID : 0633-170916-104449<br>
+              Qualification : MBA<br>
+              Experience : 4 years<br>
+              Contact :m.sarithavinod@gmail.com
+              <hr><b>Subjects Taught:</b>
+              Financial accounting analysis, Financial management, Security analysis and portfolio management,
+              performance management, managerial economics, learning and development and consumer
+              behaviour
+              <hr><b>Area of
+                Interest:</b>
+              Finance<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mba/anuradha.jpg">
+
+                  <h5 class="hvr-underline-from-center mt-4">B. Anuradha<span>Asst.Professor</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+              JNTUH REG ID : 4457-180126-180037<br>
+              Qualification : MBA<br>
+              Experience : 2 .5 YEARS<br>
+              Contact : anuradhabhumandla21@gmail.com
+              <hr><b>Subjects Taught:</b>
+              MANAGEMENT ORGANIZATIONAL BEHAVIOR,MARKETING MANAGEMENT, PERFORMANCE MANAGEMENT, PRODUCTION AND
+              OPERATIONS MANAGEMENT
+              <hr><b>Area of
+                Interest:</b>
+              Finance and Human resource management<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center pb-4">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mba/shivakanth.png" height="100"width="100">
+
+                  <h5 class="hvr-underline-from-center mt-4">T.Shivakanth<span>Assistant Professor</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+              JNTUH REG ID : 8741-180816-133326<br>
+              Qualification : B.Tech, MBA, SET, UGC NET<br>
+              Experience : 2 years<br>
+              Contact :shivakanth.t786@gmail.com
+              <hr><b>Subjects Taught:</b>
+              Human resource management, Management of industrial relations, Management information system, Business
+              law and ethics, Legal and business environment, International human resource management, Strategic
+              investment and financing decisions, Strategic management accounting
+              <hr><b>Area of
+                Interest:</b>
+              Finance<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mba/chandrashekar.jpg" height="100"width="100">
+
+                  <h5 class="hvr-underline-from-center mt-4">K. Chandra Shekar<span>Assistant Professor</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+              JNTUH REG ID : 2586-180813-161609<br>
+              Qualification : MBA<br>
+              Experience : 2 years Teaching – 6 years industry<br>
+              Contact : chanducoolin@gmail.com
+              <hr><b>Subjects Taught:</b>
+              Business Economics, Entrepreneurship, Learning and Development, Strategic Management Accounting,
+              Customer Relationship Management
+              <hr><b>Area of
+                Interest:</b>
+              Entrepreneurial marketing, Financial markets, Data Analytics, Talent acquisition, Logistics & Supply
+              Chain Management<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mba/mazharahmed.jpg" height="100"width="100">
+
+                  <h5 class="hvr-underline-from-center mt-4">Syed Mazar Ahmed<span>Asst.Prof</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+              JNTUH REG ID : 6916160308125247<br>
+              Qualification : MBA<br>
+              Experience : 2.5 Years<br><br>
+              <hr><b>Subjects Taught</b>
+              International financial management, Marketing Management<br><br>
+              <hr><b>Area of
+                Interest</b>
+              Finance<br><br></div>
+          </div>
+          <div class="row shadow rounded mx-3 my-4">
+            <div class="col-4">
+              <div class="profile-card text-center">
+
+                <img 
+                  src="Assets/mba/background.jpg" height="160"width="100%">
+                <div class="profile-info">
+
+                  <img class="profile-pic"
+                    src="Assets/mba/thirpataiah.jpg" height="100"width="100">
+
+                  <h5 class="hvr-underline-from-center mt-4">K.Thirupataiah<span>Asst.Prof</span></h5>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-8"><br>
+
+              JNTUH REG ID : 1638180818175508<br>
+              Qualification : MBA<br>
+              Experience : 2 Years<br>
+              <br>
+              <hr><b>Subjects Taught:</b>
+              International Marketing, Marketing Management<br><br>
+              <hr><b>Area of
+                Interest:</b>
+              Marketing<br><br></div>
+          </div>
+
+        </div>
+        <div id="menu3" class="container tab-pane fade"><br>
+          <h3>LABS & INFRASTRUCTURE</h3>
+          <table class="table table-bordered">
+
+            <tr>
+              <th>S.NO</th>
+              <th>PROGRAM</th>
+              <th>COURSE CODE</th>
+              <th>COURSE NAME/LAB</th>
+              <th>NO.OF SYSTEMS</th>
+              <th>BLOCK</th>
+              <th>LH/LAB NO</th>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>MBA</td>
+              <td>19MBA08</td>
+              <td>STATISTICAL DATA ANALYSIS LAB</td>
+              <td>25</td>
+              <td>APJ ABDUL KALAM BLOCK</td>
+              <td>202</td>
+            </tr>
+          </table>
+        </div>
+        <div id="menu4" class="container tab-pane fade"><br>
+          <h3>EVENTS</h3>
+          <table class="table table-bordered">
+
+            <tr>
+              <th>S.NO</th>
+              <th>DATE</th>
+              <th>TITLE</th>
+              <th>DISCRIPTION</th>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>12-11-2008 TO 14-11-2008</td>
+              <td>Entrepreneurship Awareness Camp</td>
+              <td>Conducted three days Entrepreneurship Awareness Camp for UG & PG Students, By Sri T.Subbarayudu Garu,
+                Chairman – M/s Turbo Machinery Engineering, Industries Ltd; Hyderabad.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>09-09-2009</td>
+              <td>Guest Lecture</td>
+              <td>Conducted one day Guest Lecture on Stock market & Paradigms by Mr.Chary Garu, IPE. Hyderabad.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>15-07-2010</td>
+              <td>Personality Development & Career Opportunities</td>
+              <td>Conducted one day session on Personality Development & Career Opportunities by E.Stanton James, Asst.
+                Sales Manager – Godrej Boyce, Hyderabad.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>25-10-2012</td>
+              <td>Workshop</td>
+              <td>Conducted a one day workshop on Logistics & supply chain management, by Dr.Srikanth, Institute of
+                Public Enterprise, Hyderabad.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>18-08-2014</td>
+              <td>Workshop</td>
+              <td>Conducted two days workshop on Career Planning – Communication Skills, by Mr.Ganesh, Area Sales
+                Manager- Business Line, Hyderabad.</td>
+            </tr>
+          </table>
+        </div>
+        <div id="menu5" class="container tab-pane fade"><br>
+          <h3>ACHIEVEMENTS/PLACEMENTS</h3>
+          <table class="table table-bordered">
+            <tr>
+              <th>S.NO</th>
+              <th>PROGRAM</th>
+              <th>COURSE CODE</th>
+              <th>COURSE NAME/LAB</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>M.Suresh Kumar</td>
+              <td>Associate Analyst</td>
+              <td>Wipro</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>B J Priyanka</td>
+              <td>IT Recruiter</td>
+              <td>Connexion Tech</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Ramesh Kumar</td>
+              <td>Probationary officer</td>
+              <td>APGVB</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Syed Asif Iqbal</td>
+              <td>Clerical</td>
+              <td>SBI</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>P. Nagesh</td>
+              <td>Junior Officer</td>
+              <td>Bajaj Alliance</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Prakash Reddy</td>
+              <td>Trainee</td>
+              <td>BMM</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>G.Raghavendra</td>
+              <td>Asst.Manager</td>
+              <td>Karur Vysya Bank</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>PS Srinivasulu</td>
+              <td>
+                Sales Executive</td>
+              <td>HBL Global</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>A.Aravind</td>
+              <td>Clerical</td>
+              <td>APGVB</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>T.Srinivas Reddy</td>
+              <td>Junior Manager</td>
+              <td>Assurgent Tech</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>MD Sultan</td>
+              <td>Development Executive</td>
+              <td>Mallika Hospitals</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>A.Sai swapna</td>
+              <td>Operations Executive</td>
+              <td>Teamlease staffing</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>G.Uma maheshwar</td>
+              <td>Retail Store Manager</td>
+              <td>Coromandal Fertilisers</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>B.Srinivasulu</td>
+              <td>Executive Sales</td>
+              <td>Star Powers</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>T.Ravi Kiran</td>
+              <td>Senior HR</td>
+              <td>Verinon Tech</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Chandrasekhar</td>
+              <td>Trainee</td>
+              <td>Shriram Transport</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Achyuthreddy</td>
+              <td>Jr.Manager</td>
+              <td>Indusind Bank</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>P.Manjula</td>
+              <td>Clerical Officer</td>
+              <td>Deccan Gramina Bank</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>Vidya sagar</td>
+              <td>Technical Assistant</td>
+              <td>Aurbindo Pharma</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>Shyam Prasad</td>
+              <td>Loan officer</td>
+              <td>Shriram chits</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>Aleem</td>
+              <td>Entrepreneur</td>
+              <td>Shoe shop retail</td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>Md.Asif khan</td>
+              <td>Sales manager</td>
+              <td>Kotak ING Bank</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>Chary</td>
+              <td>Financial Analyst</td>
+              <td>Delloite</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>Pavan kishore</td>
+              <td>Retail store manager</td>
+              <td>Coromandal Fertilisers</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td>Ashok reddy</td>
+              <td>Entrepreneur</td>
+              <td>Asian paints</td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>G.Sony</td>
+              <td>Clerk</td>
+              <td>SBH</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>Abhinav</td>
+              <td>Sales Manager</td>
+              <td>Manapuram gold</td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td>Y.Sravanthi</td>
+              <td>HR Manager</td>
+              <td>Envoy HR</td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td>Sandhya Rani</td>
+              <td>HR Manager</td>
+              <td>Genpact</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>Thirupathaiah</td>
+              <td>Area Sales Manager</td>
+              <td>Jersy</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>Padma priya</td>
+              <td>Senior HR</td>
+              <td>Mahaveer Hospital</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>Jagadeshwar reddy</td>
+              <td>Area sales manager</td>
+              <td>Bharat Petroleum</td>
+            </tr>
+          </table>
+        </div>
+        <div id="menu6" class="container tab-pane fade"><br>
+                    <h3>SYALLBUS</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>REGULATION</th>
+                            <th>YEAR</th>
+                        </tr>
+                        <tr>
+                            <td>R-17</td>
+                            <td><a
+                                    href="https://jntuh.ac.in/uploads/academics/R17MBASyllabuswithCourseStructure.pdf">ALL 
+                                    Years</a></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

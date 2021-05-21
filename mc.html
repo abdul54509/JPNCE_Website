@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+    </script>
+
+    <title>MECHANICAL ENGINEERING</title>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+            $('#jpncenavbar').load('navbar.html');
+        });
+    </script>
+
+</head>
+
+<body>
+    <style>
+        .profile mr-3{
+            border-radius: 50%;
+        }
+        .profile-head {
+            transform: translateY(5rem)
+        }
+
+        .cover {
+            background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .profile-card {
+            background-color: #222222;
+            margin-bottom: 0px;
+            margin-left: auto;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            max-height: 110px;
+            position: absolute;
+            top: -65px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            max-width: 100px;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+
+        .profile-info {
+            color: #BDBDBD;
+            padding: 30px;
+            padding-left: 40px;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .profile-info h2 {
+            color: #E8E8E8;
+            letter-spacing: 4px;
+            padding-bottom: 12px;
+        }
+
+        .profile-info span {
+            display: block;
+            font-size: 12px;
+            color: #4CB493;
+            letter-spacing: 2px;
+        }
+
+        .profile-info a {
+            color: #4CB493;
+        }
+
+        .profile-info i {
+            padding: 15px 35px 0px 35px;
+        }
+
+
+        .profile-card:hover .profile-pic {
+            transform: scale(1.1);
+        }
+
+        .profile-card:hover .profile-info hr {
+            opacity: 1;
+        }
+
+
+
+
+        /* Underline From Center */
+        .hvr-underline-from-center {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hvr-underline-from-center:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 52%;
+            right: 52%;
+            bottom: 0;
+            background: #FFFFFF;
+            border-radius: 50%;
+            height: 3px;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .profile-card:hover .hvr-underline-from-center:before,
+        .profile-card:focus .hvr-underline-from-center:before,
+        .profile-card:active .hvr-underline-from-center:before {
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #CECECE;
+            border-radius: 0;
+        }
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+    </style>
+    <div id="jpncenavbar"></div>
+    <div class="container">
+        <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/mc.html">Mechanical Engineering</a></li>
+                <li><a href="http://jpnce.epizy.com">Home</a></li>
+            </ul>
+        </div>
+        <h1>Mechanical Engineering</h1>
+        <hr>
+        <div class="container">
+
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">DEPARTMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">HOD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu2">FACULTY & STAFF</a>
+                </li>
+                  
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu3">LABS & INFRASTRUCTURE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu4">PUBLICATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu5">TIME TABLE</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu6">SYLLABUS</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <h3>DEPARTMENT</h3>
+                    <p align="justify">The department of Mechanical Engineering was established in 1997 with an intake
+                        of 40.The intake has developed from 40 in 1997 to 60 in 1998 to 90 in 2001 to 120 in 2011.Under
+                        Mechanical Department, with B.Tech Production specialization, 60 students got admitted in the
+                        year 2001,2002,2003,2004 and successfully completed their graduation.Our department also runs
+                        Diploma course with an intake of 60 since 2009 under II Shift Polytechnic.One of our mechanical
+                        department students,&nbsp;<em>Mr. K.Shekhar Reddy</em>&nbsp;secured highest marks among all the
+                        JNTUH affiliated college students and received Gold Medal from the Chancellor of JNTUH and
+                        Governor of Andhra Pradesh in 2005.</p>
+
+                    <p align="justify">Our department is also running PG course, M.Tech.Thermal Engineering since
+                        2011.Our mechanical department is headed by senior JNTUH professors including Dr. C. B.
+                        Krishnamurthy (Rtd. Professor, Dept. of Mech., JNTUH, Kukatpally), Prof. D. S. Shastry (Rtd.
+                        Professor, Dept. of Mech., JNTUH, Kukatpally), Dr. T. Annapurneshwar Rao ((Rtd. Professor, Dept.
+                        of Mech., Osmania University), Dr. S. Murali (Phd. From Osmainia University ), Dr. G.
+                        Parthasarthi (Ph.D from IIT-Kharagpur).</p>
+                    <p align="justify">The Mechanical Dept. has senior and experienced faculty to teach subjects from I
+                        Year to Final year, who are master (M.Tech.) in various specializations like Thermal,
+                        Production, Machine Design, etc.The department is equipped with excellent laboratories for
+                        Diploma, B.Tech. and M.Tech courses listed below:</p>
+                    <ol>
+                        <li class="rtejustify">Engineering Workshop. (Fitting, Carpentry, Tin Smithy, Black Smithy,
+                            Foundary, House wiring, Welding and Plumbing)</li>
+                        <li class="rtejustify">Production Technology Lab.</li>
+                        <li class="rtejustify">Thermal Engineering Lab.</li>
+                        <li class="rtejustify">Strength of material Lab.</li>
+                        <li class="rtejustify">Metallurgy Lab.</li>
+                        <li class="rtejustify">Metrology Lab.</li>
+                        <li class="rtejustify">Fluid Mechanics and Hydraulic Machinery Lab.</li>
+                        <li class="rtejustify">Machine Tools Lab.</li>
+                        <li class="rtejustify">Instrumentation Lab.</li>
+                        <li class="rtejustify">Heat Transfer Lab.</li>
+                        <li class="rtejustify">CAD/CAM Lab.</li>
+                        <li class="rtejustify">Engineering Drawing Lab.</li>
+                        <li class="rtejustify">Thermodynamics Lab</li>
+                        <li class="rtejustify">Kinematics and Dynamics Lab</li>
+                        <li class="rtejustify">Fuels Lab.</li>
+                        <li class="rtejustify">Pneumatics Lab.</li>
+                        <li class="rtejustify">Refrigeration &amp; Air-condition Lab</li>
+                        <li class="rtejustify">M.Tech. Thermal Engineering Lab.</li>
+                        <li class="rtejustify">Computational Methods Lab.</li>
+                    </ol>
+                    <p align="justify">The department is equipped with CNC Lathe, CNC Milling, Turret Lathe, Water
+                        Plasma Welding and Cutting, Wind Flow Tunnel (which is sanctioned from AICTE’s MODRAB scheme) to
+                        facilitate research and development activities in the related areas.The department also conducts
+                        workshops, seminars regularly for student and faculty, to improve personality development, soft
+                        skills, training skills, interview skills, etc.The department has undergone MOU with SAP through
+                        T.A.S.K in Material Management module, which will aid students for better placements after
+                        completing their graduation.</p>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <div class="row py-5 px-4">
+                        <div class="col mx-auto">
+                            <!-- Profile widget -->
+                            <div class="bg-white shadow rounded overflow-hidden">
+                                <div class="px-4 pt-0 pb-4 cover">
+                                    <div class="media align-items-end profile-head">
+                                        <div class="profile mr-3"><img src="Assets/mc/GAJALAPPA.jpg" alt="..." width="130"
+                                                class="rounded mb-2 img-thumbnail img-circle"></div>
+                                        <div class="media-body mb-5 text-white">
+                                            <h4 class="mt-0 mb-0">Mr.Y.Gajalappa</h4>
+                                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>HEAD OF THE
+                                                DEPARTMENT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-light p-4 d-flex justify-content-end text-center">
+
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">About</h5>
+                                    <div class="p-4 rounded shadow-sm bg-light mt-2">
+                                        <pre>
+JNTUH ID           : 09150404-120352<br>
+Designation        : Associate Professor and Head of the Mechanical Department<br>
+Years of Experience: ... <br>
+Email              : mech@jpnce.ac.in<br>
+Phone              : 8886680003/9573769569
+                  </pre>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Qualification:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Ph.D. working on “Thermomechanical processing and microstructure studies on
+                                        INCONEL600 superalloy “ , Osmania University, Hyderabad.<BR>
+
+                                        Master of Engineering with specialization of Production Engineering from
+                                        University College of Engineering (Autonomous), Osmania University, Hyderabad in
+                                        2002 with 72.7% with project work on Formability of sheet metals.<BR>
+
+                                        Bachelor of Engineering in Mechanical Engineering with specialization of
+                                        Production Engineering from Chaitanya Bharathi Institute of Technology,
+                                        Gandipet, Hyderabad in 1995 with 60% with project work on Design of Press Tool
+                                        in C.I.T.D, Balanagar, Hyderabad.<BR>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Subjects Taught:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Engineering Drawing, Machine Drawing,Production Drawing, Engineering Mechanics,
+                                        Mechanics of solids (Mech), Strength of Materials (Civil),Kinematics of
+                                        Machines, Dynamics of Machines, Production Technology,Machine Tools,Engineering
+                                        Metrology,Finite Element Methods (Mech & Civil), Metrology & Surface
+                                        Engineering,Metallurgy and Material Science,Advanced Metal Casting,Foundry &
+                                        Welding,Metal Forming,Tool DesignComposite Materials.
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Areas of Specialization:</h5>
+
+                                </div>
+                                <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                    Engineering Materials<BR>
+
+                                    Production Engineering
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">ACTIVITIES :</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Delivered Guest lecture classes on Velocity and Acceleration Analysis in
+                                        KINEMATICS OF MACHINES at Padmasri B.V.Raju Institute of Technology, Narsapur,
+                                        Medak Dist. in April 2011<BR><BR>
+
+                                        Delivered Guest lecture classes on Gyroscopic Effect in DYNAMICS OF MACHINES at
+                                        Padmasri B.V.Raju Institute of Technology, Narsapur, Medak Dist.in September
+                                        2012 .<BR><BR>
+
+                                        Delivered Guest lecture classes on FINITE ELEMENT METHODS at Vivekananda
+                                        Institute of Science & Info. Technology, Shadnagar, Mahabubnagar Dist. in April
+                                        2012.<BR><BR>
+
+                                        Delivered Guest lecture classes on ENGINEERING DRAWING at Vivekananda Institute
+                                        of Science & Info. Technology, Shadnagar, Mahabubnagar Dist. in
+                                        Feb-2010.<BR><BR>
+
+                                        Delivered Guest lecture classes on Gyroscopic Effect in DYNAMICS OF MACHINERY at
+                                        Arjun College of Engineering, Hyderabad in October 2011.<BR><BR>
+
+                                        Assisted to Dr T.A.JANARDHAN REDDY. Professor of Mechanical Engineering
+                                        Department University Collage of Engineering (Autonomous), Osmania University,
+                                        Hyderabad for conducting the classwork of Production Drawing during academic
+                                        year 2000-2001<BR><BR>
+
+                                        External examination question papers prepared in Engineering Drawing, Kinematics
+                                        of Machines and Dynamics of Machines for J.N.T.U.H.<BR><BR>
+
+                                        Syllabus prepared for Machine Drawing subject for J.N.T.U.H.<BR><BR>
+
+                                        Active participation in N.B.A work at Vidya Vikas Institute of Technology,
+                                        Chevella.And Vardhaman College of Engineering,Shamshabad, Hyd. On course Files
+                                        and Lab Manuals preparation.<BR><BR>
+
+                                        My M.E project the Modified Erichsen Cupping Test equipment is introduced as one
+                                        of the experiment in Production Engineering Lab for B.E & M.E Students at
+                                        University College of Engineering (Autonomous), Osmania University,
+                                        Hyderabad.<BR><BR>
+
+                                        Conducted workshop on Research Methodology and Report Writing at University
+                                        College of Engineering (Autonomous), Osmania University, Hyderabad.<BR><BR>
+
+                                        Conducted First International Workshop on The Role of Thermodynamics in Engg and
+                                        Environment at Sagar Institute of Technology, Chevella.<BR><BR>
+
+                                        Attended workshop on Production Drawing for Mechanical Engineers at Gayatri
+                                        Vidya Parishad Collage of Engg, Vishakapatnam from 6-9-2011 to 8-9-2011.<BR><BR>
+
+                                        Attended the workshop on Computer Aided Engineering at M.V.S.R Engg College,
+                                        Nadergul, Hyderabad.<BR><BR>
+
+                                        Attended AICTE -ISPE sponsored Faculty Development program on “pedagogical
+                                        Training on Outcome Based Education” at Vardaman college of engineering
+                                        shamshabad. Hyderabad.<BR><BR>
+
+                                        Attended one-week Faculty Development program on “Recent advancements in cross
+                                        Engineering “at Vardaman college of engineering
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="menu2" class="container tab-pane fade"><br>
+                    <div class="row shadow rounded mx-auto my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/mc/GAJALAPPA.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">
+                                        Mr.Y.Gajalappa<span>HOD-Asst.professor</span></h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+
+                            <b> JNTUH REG ID :</b> 09150404-120352<BR>
+                            <b>Designation : </b>Associate Professor & HOD<BR>
+                            <b>Qualification :</b> B.E (Mech),M.E (Production),(Ph.D.)&nbsp;
+                            <b>Experience : </b>24 Years<br>
+                            <b>Contact :</b> gajalappa.74@gmail.com<br>
+                            <b>Subjects Taught :</b> Engineering Drawing, Engineering Mechanics, Kinematics of Machines,<br>
+                            Dynamics of Machines, Production Technology, Machine Tools, Engineering Metrology, Finite
+                            Element Methods ,Metrology & Surface Engineering, Metallurgy and Material Science, Advanced
+                            Metal Casting,Foundry & Welding, Metal Forming, Tool Design ,Machine Drawing, Production
+                            Drawing.<br>
+                            <b>Areas of Interest :</b> Production Engineering, Theory of Machines<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-auto my-4">
+                        <div class="col-4">
+
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/mc/GOVARDHAN.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4"> Pabba
+                                        Govardhan<span>Asst.professor</span></h5>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-8"><br>
+                            <b>JNTUH REG ID : </b> 3566-150408-113523<br>
+                            <b>SBTET REG ID :</b> 11749-18542<br>
+                            <b>Qualification :</b> Mtech<br>
+                            <b>Experience : </b>20 years 6 months<br>
+                            <b>Contact :</b>pabbagopi@gmail.com<br>
+                            <hr>
+                            <b>Subjects Taught:</b>
+                            Engineering drawing , fluid mechanics, strength of materials , heat transfer, thermal engg 1
+                            , R and AC , thermodynamics , operation research, power plant engg, ICS , fluid mechanics
+                            and hydraulic machinery , heat power engg , thermal engg 2 , basic mechanical engg, advanced
+                            fluid mechanics, advanced heat and mass transfer , thermal power plant, NCES, KOM, FEM .
+                            <b>Area of
+                                Interest:</b>
+                            Thermal engineering<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-auto my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/mc/baswaraj.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Baswaraj
+                                        Dewarasetty<span>Asst.Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            <b>JNTUH REG-ID : </b>7660-150409-143952<br>
+                            <b>SBTET REG ID : </b>11749-18543<br>
+                            <b>Designation :</b> Associate Professor<br>
+                            <b>Qualification :</b> B.E,M.Tech,(Ph.D)<br>
+                            <b>Experiene :</b> 20&nbsp;
+                            <b>Contact : </b>raj.dewarasetty@gmail.com<br>
+                            <b>Subjects Taught :</b> “Engineering Drawing/Graphics , 
+                            Mechanics of
+                            Solids, Metallurgy and Material Science, Production Technology, 
+                            Kinematics of Machinery, Machine Drawing,  Dynamics of Machinery,
+                            Thermal EngineeringI, Design of Machine Members, Machine Tools, 
+                            , -Automobile Engineering, Power Plant Engineering, Operation Research, Instrumentation and Control Systems,
+                            Renewable Energy Sources, Plant Layout and Material Handling,
+                            Maintenance and Safety Engineering.”<br>
+                            <b> Areas of Interest :</b> Thermal Engineering,Design Engineering and Production
+                            Engineering<br>
+                        </div>
+                    </div>  
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center pb-4">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/RAVINDER.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Ravinder Manasani<span>Asst-
+                                                Professor</span></h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+                                JNTUH REG ID : 7636150408101621<br>
+                                Qualification : M.Tech<br>
+                                Experience : 18 years<br>
+                                Contact :manasani1912@gmail.com
+                                <hr><b>Subjects Taught:</b>
+                                Production Technology,Cnc technology, Industrial management,Fmhm, Metrology,
+                                Mechatronics, Machine drawing,MMS, Machine tools,Engg drawing
+                                <hr><b>Area of
+                                    Interest:</b>
+                                Production Engineering<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic"
+                                            src="Assets/mc/pavan.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Pavan Kumar<span>Associate
+                                                Professor</span></h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+                                JNTUH REG ID : 4976150409094917<br>
+                                Qualification : M.TECH<br>
+                                Experience : 12yrs<br>
+                                Contact : pujari.pavan1@gmail.com
+                                <hr><b>Subjects Taught:</b>
+                                Thermal Engineering and fluid mechanics and Refrigeration and Air conditioning
+                                <hr><b>Area of
+                                    Interest:</b>
+                                Thermal Engineering and bio-fuels<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/bharani.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">N Bharani Kumar<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 2712-150410-144432<br>
+                                SBTET REG ID : 11749-18548<br>
+                                Qualification : M.TECH<br>
+                                Experience : 8 Years<br><br>
+                                <hr><b>Subjects Taught</b>
+                                Mechanics of Solids, Heat Transfer, Thermal Engineering, Instrumentation Control
+                                Systems, Engineering Drawing, Machine Drawing<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Thermal Engineering<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/eshwaranna.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4"> K.Eswaranna<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 2338-150409-113347<br>
+                                SBTET REG ID : 11749-18547<br>
+                                Qualification : M.Tech<br>
+                                Experience : 10 Years<br>
+                                Contact : eshwaranna.kurva@gmail.com<br>
+                                <hr><b>Subjects Taught:</b>
+                                Design of Machine Members-I, Design of Machine Members-II, Engineering Materials,
+                                Production Drawing , Engineering Drawing, Instrumentation and control systems, Thermal
+                                Engineering<br>
+                                <hr><b>Area of
+                                    Interest:</b>
+                                Mechanical Vibrations & Engineering materials<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/sharath.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">M. Sharath Raj<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 7464150409121041<br>
+                                SBTET REG ID : 1174918572<br>
+                                Qualification : M.Tech<br>
+                                Experience : 8 Years Teaching and 3 Years Industry<br>
+                                Contact : sharathautomatic@gmail.com<br>
+                                <hr><b>Subjects Taught:</b>
+                                Production Planning and Control, Un Conventional Machining Processes, Production
+                                Technology, Machine Tools, Machine Tools and Metrology, Industrial Management and
+                                Entrepreneurship, Manufacturing Technology, Production Technology, Material Handling
+                                Equipments, Machine Tools, Advanced Manufacturing Technology<br>
+
+                                <hr><b>Area of
+                                    Interest:</b>
+                                Manufacturing, Service and Maintenance, Quality, Safety.<br><br></div>
+                        </div>
+
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/parashuram.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4"> Parshuram
+                                            Degulamadi<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 1-2899114731<br>
+
+                                Qualification : M.Tech (Production Engineering)<br>
+                                Experience : 7 years<br><br>
+                                Contact : dparshuram@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                Manufacturing process, Refrigeration and Air conditioning, Thermodynamics,
+                                Instrumentation and control system, Mechanics of materials, Finite element analysis,
+                                Fluid mechanics, Estimation and costing, Power plant engineering, Computer integrated
+                                manufacturing, CAD/CAM, Workshop technology.<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Manufacturing process, Thermodynamics<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/ali.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Syed Mushtaq
+                                            Ali<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID :1022-180417-121344<br>
+                                SBTET REG ID : 11749-18548<br>
+                                Qualification : M.TECH<br>
+                                Experience : 2 Years<br>
+                                Contact : syedmushtaqali444@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                CAD/CAM, Unconventional Machining Processes, Advanced Workshop Technology<br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Designing<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/shashi.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">S Shashidhar
+                                            Reddy<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 11749-18544<br>
+
+                                Qualification : M.TECH<br>
+                                Experience : 5 Years<br><br>
+                                Contact : shashidhar350@gmail.com
+                                <hr><b>Subjects Taught</b>
+                                Machine drawing, production drawing, engineering drawing, work Shop technology,
+                                manufacturing technology, engineering materials,CAD cam, energy sources and power plant
+                                engineering, fluid mechanics and hydraulic machines<br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Production and manufacturing<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/murali.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4"> kokkala venkata murali
+                                            krishna<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 2100-180421-121707<br>
+                                SBTET REG ID : 11749-18548<br>
+                                Qualification : M.TECH<br>
+                                Experience : 2 Years<br>
+                                Contact : kokkalamurali.121@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                thermodynamics, design of machine members designing<br><br>
+                                <hr><b>Area of
+                                    Interest:</b>
+                                Designing<br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/sameer.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Mohammed Sameer<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 9732-180819-204955<br>
+                                SBTET REG ID : 11749-18548<br>
+                                Qualification : M.TECH<br>
+                                Experience : 2 Years<br><br>
+                                Contact : 312sameer@gmail.com
+                                <hr><b>Subjects Taught</b>
+                                Engineering Drawing & Strength of Materials Designing<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Designing<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/saikrishna.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Jetty Sai
+                                            Krishna<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 1438-150427-160942<br>
+                                SBTET REG ID : 11749-18548<br>
+                                Qualification : M.TECH<br>
+                                Experience : 2 Years<br><br>
+                                Contact : jettysai@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                Engineering drawing, DOM Production<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Thermal Engineering<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/mohan.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Surendra Mohan
+                                            A<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                JNTUH REG ID : 3619 190503 115140<br>
+                                SBTET REG ID : 11749-18548<br>
+                                Qualification : M.TECH<br>
+                                Experience : 1 year teaching and 11 years industry<br><br>
+                                Contact : mohan.surendra20@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                Machine Tools, Advanced manufacturing technology,Machine Tools and
+                                Metrology,UnConventional Machining Process ,Production Technology, Manufacturing
+                                technology,Material handling equipments, Industrial Management and
+                                Entrepreneurship<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Production,Manufacturing,Quality control, Quality Assurance.<br><br></div>
+                        </div>
+                        <hr>
+                        <h5> Diploma Staff</h5>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/ramakrishna.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4"> K Ramakrushna<span>Lecturer</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+
+                                SBTET REG ID : 11749-18549<br>
+                                Qualification : BTech<br>
+                                Experience : 5 Years<br><br>
+                                Contact : kramakrushna1994@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                Engineering Drawing, Thermal Engineering, Strength of materials, Fluidmechanics and
+                                hydraulic machines, material science, Engineering Mechanics, Desining of machine
+                                elements<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Designing<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/anitha.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4"> K.Anitha<span>Lecturer</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+
+                                SBTET REG ID : 11749-18808<br>
+                                Qualification : M.TECH<br>
+                                Experience : 8 Years<br><br>
+                                Contact : kavalianitha5@gmail.com
+                                <hr><b>Subjects Taught</b>
+                                Work shop<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Designing<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/mahati.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">Gadwal Mahathi<span>Lecturer</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+
+                                SBTET REG ID : 11749-20007<br>
+                                Qualification :B.E<br>
+                                Experience : 8 Years<br><br>
+                                Contact : gadwalmahathi777@gmail.com<br>
+                                <hr><b>Subjects Taught</b>
+                                R&AC<br><br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Designing<br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/veerendra.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">T. Veerendra
+                                            Goud<span>Lecturer</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+
+                                SBTET REG ID : 11749-20006<br>
+                                Qualification : B.Tech<br>
+                                Experience : 8 Years<br><br>
+                                Contact : veeru1112016@gmail.com
+                                <hr><b>Subjects Taught</b>
+                                Estimating and costing Production<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Designing<br><br></div>
+                        </div>
+                        <hr>
+                        <h5>NON TEACHING STAFF
+                        </h5>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/rajashekar.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">R Rajashekar Reddy<span>LAB
+                                                ASSISTANT</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                Name : R Rajashekar Reddy<BR>
+                                Designation : LAB ASSISTANT<BR>
+                                Qualification : I.T.I , Diploma<br>
+                                Experience : 23 Years<br><br>
+                                Contact : rajashekarjpnce@gmail.com
+                                <hr><b>Subjects Taught</b>
+                                Workshop, Fluid Mechanics and Hydraulic Machines lab Heat Transfer lab Fluid
+                                Mechanics<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Workshop Technology <br><br>
+                            </div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/rajaiah.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">M Rajaiah<span>Asst.Prof</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+                                Name : M Rajaiah<BR>
+                                Designation : Lab Assistant<BR>
+                                Qualification : I.T.I<br>
+                                Experience : 23 Years<br><br>
+                                Contact : rajaiahjpnce@gmail.com
+                                <hr><b>Subjects Taught</b>
+                                Workshop, Production Technology lab<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Workshop Technology <br><br></div>
+                        </div>
+                        <div class="row shadow rounded mx-auto my-4">
+                            <div class="col-4">
+                                <div class="profile-card text-center">
+
+                                    <img class="img-fluid"
+                                        src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                    <div class="profile-info">
+
+                                        <img class="profile-pic" src="Assets/mc/jagadeshwar.jpg">
+
+                                        <h5 class="hvr-underline-from-center mt-4">M Jagadeeshwar Reddy<span>Lab
+                                                Assistant</span>
+                                        </h5>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-8"><br>
+
+
+                                Qualification :I.T.I ,B.A<br>
+                                Experience : 22 Years<br><br>
+                                Contact : jagadeeshjpnce12jagadees12@gmail.com<BR>
+                                <hr><b>Subjects Taught</b>
+                                Instrumentation and control systems lab Kinematics and Dynamics lab Metrology and
+                                Machine Tools lab, Work shop Machine Tools<br><br>
+                                <hr><b>Area of
+                                    Interest</b>
+                                Workshop Technology<br><br></div>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+                    <div id="menu3" class="container tab-pane fade"><br>
+                        <h3>LABS & INFRASTRUCTURE</h3>
+                        <table class="table table-bordered">
+
+                            <tr>
+                                <th>S.NO</th>
+                                <th>PROGRAM</th>
+                                <th>COURSE CODE</th>
+                                <th>COURSE NAME/LAB</th>
+                                <th>NO.OF SYSTEMS</th>
+                                <th>BLOCK</th>
+                                <th>LH/LAB NO</th>
+                            </tr>
+
+                         
+                        </table>
+                    
+                    <div id="menu4" class="container tab-pane fade"><br>
+                        <h3>PUBLICATIONS</h3>
+                        <BR>
+                       <h5> D Baswaraj (Asso. Prof.)</h5>
+                        <span style="font-size: medium;"><p align="justify">
+1. Comparative Studies on Performance and Emissions of Two Stroke and Four Stroke Copper Coated Spark Ignition Engines with Methanol blended gasoline.&nbsp;In IMECE-2013&nbsp;International Conference at Sandigo USA in the month of November 2013.
+<br><br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">2.Potential of Medium grade Low Heat Rejection Diesel Engine with Crude Tobacco seed oil. In IMECE-2013 International Conference at Sandigo USA in the month of November 2013.</span></span>
+<br><br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">3.Improving the performance of manufacturing sector-lean methodology and its impact in International Journal of Engineering Science Invention -ISSN (Online): 2319 – 6734, ISSN (Print): 2319 – 6726 .</span></span>
+<br><br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">4.<b>I</b>mprovement in Productivity efficiency of an electrical components manufacturing industry in India with the application of lean Manufacturing tool Kan-Ban&nbsp;in&nbsp;<span style="color: #000000;">International Journal of&nbsp;</span><span style="color: #000000;">Mechanical Computational and Manufacturing Research (ISSN: 2301-4148).</span></span></span>
+<br><br>
+<span style="font-family: Raleway;"><span style="font-size: medium;"><span style="color: #000000;">5.</span><span style="color: #222222;">A Review on Significant Parameters and Exhaust Emissions of Four Stroke Copper Coated SI Engine with Alcohol Blended Gasoline through Catalytic Converter”&nbsp;</span><span style="color: #222222;">in&nbsp;</span><span style="color: #222222;">International Journal of Advanced Mechanical Engineering (IJAME).</span></span></span>
+<br>
+<span style="font-family: Raleway;"><span style="font-size: medium;"><b>P Pavan Kumar (Asso. Prof.)</b></span></span>
+<br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">1. Performance Evaluation Of Mixtures Of Cotton Seed Oil &amp; Tobacco Seed Oil Based Bio Diesel For Lhr Engine, Asme2013.</span></span>
+<br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">2. Design And Analysis Of Connecting Rod Using Ansys.</span></span>
+<br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">3. Parametric Evaluation Of Jatropa Oil Using Lhr Diesel Engine Ijaer 2014.</span></span>
+<br>
+<span style="font-family: Raleway;"><span style="font-size: medium;"><b>D Parshuram (Asst. Prof.)</b></span></span>
+<br>
+<span style="font-family: Raleway;"><span style="font-size: medium;">1. Design &amp; analysis of composite / hybrid drive shaft, IJES, Volume 2, Issue 01, Page No.: 160 – 171, 2013</span></span></p></span>
+                    </div>
+                    <div id="menu5" class="container tab-pane fade"><br>
+                        <h3>TIME TABLE</h3>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>S.NO</th>
+                                <th>YEAR</th>
+                                <th>SEM - I</th>
+                                <th>SEM - II</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>FIRST YEAR</td>
+                                <td>Iyr-Isem</td>
+                                <td>Iyr-IIsem</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>SECOND YEAR</td>
+                                <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/ME-2-1-TT.pdf">IIyr-Isem</a></td>
+                                <td>IIyr-IIsem</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>THIRD YEAR</td>
+                                <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/ME-3-1-TT.pdf">IIIyr-Isem</a></td>
+                                <td>IIIyr-IIsem</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>FOURTH YEAR</td>
+                                <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/ME-4-1-TT.pdf">IVyr-Isem</a></td>
+                                <td>IVyr-IIsem</td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                     <div id="menu6" class="container tab-pane fade"><br>
+                        <h3>SYLLABUS</h3>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>S.NO</th>
+                                <th>REGULATIONS</th>
+                                <th>YEAR</th>
+
+                            </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>R-16 </td>
+                                <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/R16_B.Tech_Mechanical_Engineering_IV_Year_Revised_Syllabus.pdf"> IV Year </td>
+                               
+                            </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>R-18 </td>
+                                <td><a href="https://files.jntufastupdates.com/download/r18-b-tech-i-year-syllabus-of-non-circuit-branches/?wpdmdl=30498&amp;refresh=600cfe3d9c11e1611464253">I Year</a> &nbsp; <a href="https://jpnce.ac.in/wp-content/uploads/2020/11/R18-B.TECH-MECHANICAL-ENGG-II-Year-Syllabus.pdf">II Year &nbsp<a href="https://jpnce.ac.in/wp-content/uploads/2020/11/R18-B.Tech_.MechanicalEngg.IIIYearSyllabus.pdf"> III Year &nbsp<a href="#"> IV Year </td>
+                               
+                            </tr>
+
+                            </table>
+
+                        </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="footer"></div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

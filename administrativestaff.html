@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+	 crossorigin="anonymous">
+	</script>
+
+	<title>ADMINISTRATIVE STAFF</title>
+	<script>
+		$(function () {
+            $('#footer').load('footer.html');
+            $('#jpncenavbar').load('navbar.html');
+        });
+	</script>
+</head>
+
+<body>
+	<style>
+		.profile-head {
+			transform: translateY(5rem)
+		}
+
+		.cover {
+			background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+			background-size: cover;
+			background-repeat: no-repeat
+		}
+
+		.profile-card {
+			background-color: #222222;
+			margin-bottom: 0px;
+			margin-left: -15px;
+		}
+
+		.profile-pic {
+			border-radius: 50%;
+			position: absolute;
+			top: -65px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			z-index: 1;
+			max-width: 100px;
+			-webkit-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+
+
+		.profile-info {
+			color: #BDBDBD;
+			padding: 30px;
+			padding-left: 40px;
+			position: relative;
+			margin-top: 15px;
+		}
+
+		.profile-info h2 {
+			color: #E8E8E8;
+			letter-spacing: 4px;
+			padding-bottom: 12px;
+		}
+
+		.profile-info span {
+			display: block;
+			font-size: 12px;
+			color: #4CB493;
+			letter-spacing: 2px;
+		}
+
+		.profile-info a {
+			color: #4CB493;
+		}
+
+		.profile-info i {
+			padding: 15px 35px 0px 35px;
+		}
+
+
+		.profile-card:hover .profile-pic {
+			transform: scale(1.1);
+		}
+
+		.profile-card:hover .profile-info hr {
+			opacity: 1;
+		}
+
+
+
+
+		/* Underline From Center */
+		.hvr-underline-from-center {
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-transform: translateZ(0);
+			transform: translateZ(0);
+			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-moz-osx-font-smoothing: grayscale;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hvr-underline-from-center:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			left: 52%;
+			right: 52%;
+			bottom: 0;
+			background: #FFFFFF;
+			border-radius: 50%;
+			height: 3px;
+			-webkit-transition-property: all;
+			transition-property: all;
+			-webkit-transition-duration: 0.2s;
+			transition-duration: 0.2s;
+			-webkit-transition-timing-function: ease-out;
+			transition-timing-function: ease-out;
+		}
+
+		.profile-card:hover .hvr-underline-from-center:before,
+		.profile-card:focus .hvr-underline-from-center:before,
+		.profile-card:active .hvr-underline-from-center:before {
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: #CECECE;
+			border-radius: 0;
+		}
+
+		#cssmenu ul {
+			display: flex;
+			/* A key part of our menu, displays items side by side, and allows reversing them */
+			flex-direction: row-reverse;
+			/* Reverse the items */
+		}
+
+		/* Background container */
+		#cssmenu-container {
+			height: 220px;
+			background-color: #CEE3F8;
+		}
+
+		/* Menu container */
+		#cssmenu {
+			display: inline-block;
+			/* The menu will have width as needed, not 100% */
+			position: relative;
+			left: 11%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-family: Helvetica, sans-serif;
+			font-size: 14px;
+			line-height: 1em;
+			border-radius: 2px;
+			/* Little curvature in the borders */
+			overflow: hidden;
+			/* Hide everything that overflows, like shadows */
+		}
+
+		/* Icons */
+		#cssmenu i {
+			transform: scale(1.4);
+		}
+
+		/* Menu */
+		#cssmenu ul {
+			display: flex;
+			/* A key part of our menu, displays items side by side, and allows reversing them */
+			flex-direction: row-reverse;
+			/* Reverse the items */
+			/* Reset styles, overwrite browser defaults */
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#cssmenu ul li {
+			margin: 0;
+		}
+
+		/* Menu items */
+		#cssmenu ul li a {
+			display: inline-block;
+			font-family: sans-serif;
+			font-size: 0.9em;
+			font-weight: 600;
+			padding: 12px 30px 12px 45px;
+			/* Adjusting padding to get the proper space */
+			margin-left: -20px;
+			/* Pull the items to the left, so the rounded right side will get over them */
+			color: white;
+			background-color: #428EFE;
+			text-decoration: none;
+			text-transform: uppercase;
+			border-radius: 0 100px 100px 0;
+			/* Get the right side rounded */
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+			/* Apply the shadow */
+		}
+
+		/* Hover event */
+		#cssmenu ul li:hover a {
+			background-color: #297EFE;
+		}
+
+		/* Remove the shadow for first item, last in the right side when it gets reversed */
+		#cssmenu ul li:first-child a {
+			box-shadow: none;
+		}
+
+		/* Active item is a bit different */
+		#cssmenu ul li.active a {
+			color: #428EFE;
+			background-color: #EEF5FF;
+		}
+
+		/* Remove the shadow for the active's next item, to match the design more accurately */
+		#cssmenu ul li.active+li a {
+			box-shadow: none;
+		}
+	</style>
+	<div id="jpncenavbar"></div>
+	<div class="container mt-3">
+		<div id="cssmenu" class="mt-4" align="left">
+			<ul>
+				<li class="active"><a href="http://jpnce.epizy.com/administrativestaff.html">ADMINISTRATIVE STAFF</a></li>
+				<li><a href="http://jpnce.epizy.com">HOME</a></li>
+			</ul>
+		</div>
+		<h1>Administrative Staff</h1>
+		<hr>
+		<div class="row">
+			<div class="col-md-4 shadow rounded my-4 mx-3">
+				<div class="profile-card text-center pb-4">
+
+					<img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/1.jpg" height="100" width="100">
+
+                        <h5 class="hvr-underline-from-center mt-4">S SHIVARAJ<span>Senior Assistant (Scholarships and
+                                Accounts)</span></h5>
+                                <p>QUALIFICATION : BA<br>
+                EXPERIENCE : 25 Years<br>
+                CONTACT : asr275665@gmail.com<br>9010181575</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+        
+            <div class="col shadow rounded my-4 mx-3">
+                <div class="profile-card text-center pb-4">
+
+                    <img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/2.jpg" height="100" width="100">
+
+                        <h5 class="hvr-underline-from-center mt-4">B NARESH BABU<span>ACCOUNTS OFFICER</span></h5>
+                        <p>QUALIFICATION : M.COM<br>
+                EXPERIENCE : 25 Years<br>
+                CONTACT : bnareshgoud1972@gmail.com<br>9951517795</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+        
+            <div class="col shadow rounded my-4 mx-3">
+                <div class="profile-card text-center pb-4">
+
+                    <img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/3.jpg">
+
+                        <h5 class="hvr-underline-from-center mt-4">Medisetty Narender<span>Senior Assistant</span></h5>
+                        <p>QUALIFICATION : MBA 2 MEFA,MS<br>
+                EXPERIENCE : 33 Years<br>
+                CONTACT : narus1966@gmail.com<br>>9705350359</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+		</div>
+            
+        <div class="row">
+            <div class="col-md-4 shadow rounded my-4 mx-3">
+                <div class="profile-card text-center pb-4">
+
+                    <img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/4.jpg">
+
+                        <h5 class="hvr-underline-from-center mt-4">G. AMARESHWAR REDDY<span>Senior Assistant</span></h5>
+                        <p>QUALIFICATION : B.A., PGDCA<br>
+                EXPERIENCE : 22 Years in JPNCE<br>
+                CONTACT : amareshwarreddy.gowni@gmail.com<br>8886680025</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+        
+        
+            <div class="col-md-4 shadow rounded my-4 mx-3">
+                <div class="profile-card text-center pb-4">
+
+                    <img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/5.jpg" height="100" width="100">
+
+                        <h5 class="hvr-underline-from-center mt-4">D.Gopala Krishna Rao<span>Senior assistant</span>
+                        </h5>
+                        <p>QUALIFICATION : B.A.<br>
+                EXPERIENCE : 15 years<br>
+                CONTACT : gopi.dongur@gmail.com<br>>9885311389</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+        
+        
+            <div class="col-md-4 shadow rounded my-4 mx-3">
+                <div class="profile-card text-center pb-4">
+
+                    <img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/6.jpg" height="100" width="100">
+
+                        <h5 class="hvr-underline-from-center mt-4">V. Parthasarathi<span>Senior Assistant
+                                (Accounts)</span></h5>
+                                <p>QUALIFICATION : Degree<br>
+                EXPERIENCE : 14<br>
+                CONTACT : parthu.bardwaj@gmail.com<br>9848192560</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4 shadow rounded my-4 mx-3">
+                <div class="profile-card text-center pb-4">
+
+                    <img class="img-fluid" src="Assets/administrativestaff/background.jpg">
+                    <div class="profile-info">
+
+                        <img class="profile-pic" src="Assets/administrativestaff/7.jpg" height="100" width="100">
+
+                        <h5 class="hvr-underline-from-center mt-4">P. Srinivas Reddy<span>Operator (Computer typing
+                                work)</span></h5>
+                                <p>QUALIFICATION : SSC<br>
+                EXPERIENCE : 16 Years<br>
+                CONTACT : srinisys.reddy@gmail.com<br>9573794447</p>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>            
+    </div>
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <div class="container">
+</body>
+
+</html>

@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <title>ELECTRICAL & ELECTRONICS ENGINEERING</title>
+    <script>
+        $(function () {
+            $("#jpncenavbar").load("navbar.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <style>
+        @media screen and (min-width: 500px) {
+            #html {
+                font-size: 11px;
+            }
+        }
+
+        @media screen and (min-width: 570px) {
+            #html {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (min-width: 620px) {
+            #html {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (min-width: 680px) {
+            #html {
+                font-size: 13px;
+            }
+        }
+
+        @media screen and (min-width: 720px) {
+            #html {
+                font-size: 13px;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            #html {
+                font-size: 13px;
+            }
+        }
+
+        @media screen and (min-width: 860px) {
+            #html .headingtop {
+                font-size: 13px;
+            }
+        }
+
+        @media screen and (min-width: 920px) {
+            #html .headingtop {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            #html .headingtop {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (min-width: 1100px) {
+            .headingtop {
+                font-size: 19px;
+            }
+        }
+
+        @media screen and (min-width: 1254px) {
+            .headingtop {
+                font-size: 25px;
+            }
+        }
+
+        .custom-nav1:hover {
+            background-color: red;
+            text-anchor: white;
+        }
+
+        .custom-nav2:hover {
+            background-color: yellow;
+            color: white;
+        }
+
+        .custom-nav3:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .custom-nav4:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .custom-nav5:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .profile-card {
+            background-color: #222222;
+            margin-bottom: 20px;
+
+        }
+
+        .profile-pic {
+            border-radius: 100%;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            max-width: 200px;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+
+        .profile-info {
+            color: #BDBDBD;
+            padding: 25px;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .profile-info h2 {
+            color: #E8E8E8;
+            letter-spacing: 4px;
+            padding-bottom: 12px;
+        }
+
+        .profile-info span {
+            display: block;
+            font-size: 12px;
+            color: #4CB493;
+            letter-spacing: 2px;
+        }
+
+        .profile-info a {
+            color: #4CB493;
+        }
+
+        .profile-info i {
+            padding: 50px 35px 0px 35px;
+        }
+
+
+        .profile-card:hover .profile-pic {
+            transform: scale(1.1);
+        }
+
+        .profile-card:hover .profile-info hr {
+            opacity: 1;
+        }
+
+
+
+
+        /* Underline From Center */
+        .hvr-underline-from-center {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hvr-underline-from-center:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 52%;
+            right: 52%;
+            bottom: 0;
+            background: #FFFFFF;
+            border-radius: 50%;
+            height: 3px;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .profile-card:hover .hvr-underline-from-center:before,
+        .profile-card:focus .hvr-underline-from-center:before,
+        .profile-card:active .hvr-underline-from-center:before {
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #CECECE;
+            border-radius: 0;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .profile-head {
+            transform: translateY(5rem)
+        }
+
+        .cover {
+            background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .profile-card {
+            background-color: #222222;
+            margin-bottom: 0px;
+            margin-left: -15px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            position: absolute;
+            top: -65px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            max-width: 100px;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+
+        .profile-info {
+            color: #BDBDBD;
+            padding: 30px;
+            padding-left: 40px;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .profile-info h2 {
+            color: #E8E8E8;
+            letter-spacing: 4px;
+            padding-bottom: 12px;
+        }
+
+        .profile-info span {
+            display: block;
+            font-size: 12px;
+            color: #4CB493;
+            letter-spacing: 2px;
+        }
+
+        .profile-info a {
+            color: #4CB493;
+        }
+
+        .profile-info i {
+            padding: 15px 35px 0px 35px;
+        }
+
+
+        .profile-card:hover .profile-pic {
+            transform: scale(1.1);
+        }
+
+        .profile-card:hover .profile-info hr {
+            opacity: 1;
+        }
+
+
+
+
+        /* Underline From Center */
+        .hvr-underline-from-center {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hvr-underline-from-center:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 52%;
+            right: 52%;
+            bottom: 0;
+            background: #FFFFFF;
+            border-radius: 50%;
+            height: 3px;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .profile-card:hover .hvr-underline-from-center:before,
+        .profile-card:focus .hvr-underline-from-center:before,
+        .profile-card:active .hvr-underline-from-center:before {
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #CECECE;
+            border-radius: 0;
+        }
+         #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+    </style>
+
+    <div id="jpncenavbar"></div>
+    <div class="container">
+        <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/eee.html">Electrical & Electronics Engineering</a></li>
+                <li><a href="http://jpnce.epizy.com">Home</a></li>
+            </ul>
+        </div>
+        <h1>ELECTRICAL & ELECTRONICS ENGINEERING</h1><br>
+        <hr>
+        <img src="Assets/eee1.jpg" alt="EEE" width="100%" height="300" alt="Responsive image">
+        <p>The department has well equipped EM lab, Power Electronics lab, control systems lab, Measurement lab, Network
+            lab , MPMC lab and Simulation lab. The equipments are from standard reputed companies / suppliers viz.
+            Kirloskar, Crompton & Greeves etc. the labs are spacious as per AICTE requirements and are located in ground
+            floor of main building. The department organizes planned industrial tours for the students of III EEE every
+            year to companies like BHEL , power Stations viz. RTPS , VTPS , Sree Sailam HEPS , Steel Plants of
+            Visakapatnam and Hospet etc.</p>
+        <h5>EEE Mission & Vision :</h5>
+        <p>To facilitate the students to thoroughly appreciate and assimilate the nuances of the discipline with
+            particular accent on empiricism Our department is accredidated. The department with 16 strong and committed
+            faculty and supporting staff with rich practical experience is headed by Prof. B. Veeresham, who has
+            completed M.Tech in Electrical Engineering with a specialization in Power Electronics from JNTUH. He has 10
+            years of industrial experience. The department is blessed with support from academic and industrial
+            luminaries like Dr. Tulasiram Das, Hon’be VC of JNTU Kakinada, and Dr. GN Srinivas, Prof. EEE Department of
+            JNTU Hyderabad, and former head of the department Prof TVSN Murthy retired DGM from BHEL.</p>
+        <h5>Mission:</h5>
+        <p>To have a technical collaboration with premier educational institutes and Maharatna Companies for exchange of
+            state of art and know how. To impart and to encourage concept oreinted studies with work experince. To
+            acheive 100% placements.</p>
+        <h5>Vision:</h5>
+        <p>To develop the department to the equivalent levels of premier technical institution in the country. To
+            produce electrical engineers vibrant with “SELF CONFIDENCE” “STATE OF ART” to enable them to fit any slot
+            and to produce national wealth. To establish the department as a research and development center in
+            electrical engnieering and meet the needs of future.</p><br>
+        <div class="container">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" style="color: blue;">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" style="color:#007FFF" href="#department">DEPARTMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab"style="color:#007FFF" href="#hod">HOD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab"style="color:#007FFF" href="#facultystaff">FACULTY & STAFF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab"style="color:#007FFF" href="#labsinfastructure">LABS & INFRASTRUCTURE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" style="color:#007FFF"href="#publications">PUBLICATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" style="color:#007FFF"href="#events">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" style="color:#007FFF"href="#achivements">ACHIEVEMENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" style="color:#007FFF"href="#syllabus">SYLLABUS</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="department" class="container tab-pane active"><br>
+                    <h4>About the department :</h4>
+                    <p>The department has well equipped EM lab, Power Electronics lab, control systems lab, Measurement
+                        lab, Network lab and Simulation lab. The equipments are from standard reputed companies /
+                        suppliers viz. Kirloskar, Crompton & Greeves etc. the labs are spacious as per AICTE
+                        requirements and are located in ground floor of main building.<br><br>The department organizes
+                        planned industrial tours for the students of III EEE every year to companies like BHEL, power
+                        Stations viz. RTPS , VTPS , Sree Sailam HEPS , Steel Plants of Visakapatnam and Hospet etc. Also
+                        the department periodically organizes seminars, workshops expert lectures to make staff and
+                        students to keep in pace with latest developments in the field and state of art.<br><br>In
+                        addition to the excellent library and Digital library facilities in the college, the department
+                        has its department library with updated journals and manuals. These educational facilities
+                        coupled with encouragement, motivation above all serene environment provide Philip to our staff
+                        and students to do innovative and creative things. Thus , we in the department designed and
+                        fabricated various domestic and industrial working models viz. UPS, IG inverters etc clap
+                        switch, Burglar alarm and designed and fabricated “ Integrated Auto Traction System” working
+                        model. The advantages of this IATS are not only to detect and control the station and rail way
+                        gates but also dynamically check the continuity of the track which is relatively a new concept
+                        in our country. This ensures safety of passengers in addition to railway property.
+                        <br><br>The final year students developed a working model “ Micro controller Based Smart Energy
+                        Meter with Data Transmission” with special features Power Consumption Data Transmission Directly
+                        to substation concerned, Power theft prevention, HV / LV protection etc. We propose to suggest
+                        to the concerned CPDCL authorities for implementation after verifying commercial
+                        feasibility.<br><br>Some of the working models were selected and found placed in the exhibition
+                        organized by SRUJANA, PRAGNA etc. Most of the models won laurels by one and all.<br><br>The
+                        students presented papers at various seminars organized by various colleges in AP and other
+                        states. Some of them won first prize.
+                        <br><br>The faculty members are deputed to attend seminars , workshops organized by Osmania
+                        University , JNTU, NIT and IISC Banglore etc.<br><br>Under QIP our management is magnanimous to
+                        sponsor our staff to M.Tech programs 4 staff members completed M.Tech. The faculty of the
+                        department presented more than 6 technical papers in international conferences.
+                        The department offers technical and training support to the industries located in this region.
+                        Based on “Bridge Course Analysis” conducted by our department over a period of 12 months ( 2
+                        spells ), we conducted courses for skills which are in high demand for our pre and final year
+                        students. This helps them to do well in “ placement interviews” etc.
+                        <br><br>As regards curriculum improvement program, our department has given number of suggestion
+                        to JNTU, most of them were adapted and introduced with Academic regulations course
+                        Structure.<br></p>
+
+                </div>
+                <div id="hod" class="container tab-pane fade"><br>
+                    <div class="row py-5 px-4">
+                        <div class="col mx-auto">
+                            <!-- Profile widget -->
+                            <div class="bg-white shadow rounded overflow-hidden">
+                                <div class="px-4 pt-0 pb-4 cover">
+                                    <div class="media align-items-end profile-head">
+                                        <div class="profile mr-3"><img src="Assets/eee/eeehod.jpg" alt="..." width="130"
+                                                class="rounded mb-2 img-thumbnail img-circle"></div>
+                                        <div class="media-body mb-5 text-white">
+                                            <h4 class="mt-0 mb-0">Dr. M Santhosh Kumar Goud</h4>
+                                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>HEAD OF THE
+                                                DEPARTMENT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-light p-4 d-flex justify-content-end text-center">
+
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">About</h5>
+                                    <div class="p-4 rounded shadow-sm bg-light mt-2">
+                                        <pre>
+JNTUH ID           : 9318 – 200110 – 130548<br>
+Designation        : HEAD OF THE DEPARTMENT & Assistant Professor<br>
+Years of Experience: 5 Years<br>
+Email              : eee@jpnce.ac.in<br>
+Phone              : 8886680002
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Qualification:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Ph.D. (NITK), MS(UK), MS(Bel)
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Subjects Taught:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                         Electrical Machines – I, Electrical Machines – II, Electrical Machines – III, Basic Electrical Engineering, Power Systems-I, Power Systems-II, Switchgear & Protection, Electromagnetic Field Theory
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Areas of Specialization:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Smartgrid/Micrigrid, Machine Learning and Artificial Intelligence Techniques applications to Power Systems, Power Quality, & Electric Vehicles
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="facultystaff" class="container tab-pane fade"><br>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/eee/eeehod.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Dr. M Santhosh Kumar
+                                        Goud<span>HOD-Asst.professor</span></h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+
+                            JNTUH REG ID : 9318 – 200110 – 130548<br>
+                            Qualification : Ph.D. (NITK), MS(UK), MS(Bel)<br>
+                            Experience : 5 Years<br>
+                            Contact : santhosh.manikonda@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            Electrical Machines – I, Electrical Machines – II, Electrical Machines – III, Basic
+                            Electrical Engineering, Power Systems-I, Power Systems-II, Switchgear & Protection,
+                            Electromagnetic Field Theory
+                            <hr><b>Area of
+                                Interest:</b>
+                            Smartgrid/Micrigrid, Machine Learning and Artificial Intelligence Techniques applications to
+                            Power Systems, Power Quality, & Electric Vehicles<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/veereshram.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. B Veeresham<span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 5219-150413-110317<br>
+                            SBTET REG ID : 11749-18545<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : 20 years<br>
+                            Contact : veereshamborelly@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            DC machine, AC machine 1 &2 , Utilisation of Electrical engineering, Electrical estimation,
+                            basic Electrical engineering, Electrical distribution systems, Power system 1&2
+                            <hr><b>Area of
+                                Interest:</b>
+                            Research in machines and Electronics and projects<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/mahesh.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">B.
+                                        Mr. P Mahesh<span>Assistant Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 6719-150409-155047<br>
+                            SBTET REG ID :18539<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : 8 YEARS<br>
+                            Contact : maheshpogula.p@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            EMF,nt, control systems, electrical measurements,instrumentation,,
+                            machines, power systems,some electives eds,ehvac, modern power electronics,hvdc
+                            <hr><b>Area of
+                                Interest:</b>
+                            Power electronics and power systems<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center pb-4">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Sreelatha.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Ms. A Sreelatha<span>Assistant
+                                            Professor</span></h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 0496-150416-164455<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : 2 years<br>
+                            Contact : ...@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            ...
+                            <hr><b>Area of
+                                Interest:</b>
+                            ...<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Prashanth.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. R Prashanth<span>Assistant
+                                            Professor</span></h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 4525-150415-160554<br>
+                            Qualification : M.Tech (PED)<br>
+                            Experience : 4 years<br>
+                            Contact : prashanthrajanala225@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            Machines ,power electronics ,emi,controll systems
+                            <hr><b>Area of
+                                Interest:</b>
+                            Machines, power electronics<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Venkatesh.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. CH Venkatesh<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 0034-150417-092501<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : ...<br>
+                            Contact: ...<br>
+                            <hr><b>Subjects Taught</b>
+                            ...<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            ...<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/sampath.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. M Sampath Patel<span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 8249-160309-121701<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : 7 Years<br>
+                            Contact : patel.sampath@gmail.com<br>
+                            <br>
+                            <hr><b>Subjects Taught:</b>
+                            Power systems 1 & 2 , switch gear and protection, basic Electrical engineering, disaster
+                            management, network theory, principle of Electrical engineering, DC machine, AC machine 1 &
+                            2, power electronics, HVDC and facts, Control systems etc.,<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Power Electronics and power systems and machine learning and deep learning<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Ramakrishna.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. A Mani Ramakrishna<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 3641-150415-171816<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : 3 Years<br><br>
+                            Contact : adikemrk@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            Electrical Machines, Electrical Engineering Drawing, Electrical traction,Basic Electrical
+                            Engineering,Power System , Electrical Technology,<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Power System,Smart Grid Technology,DataScinece, Power Electronics<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Pradeep.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. A Pradeep Kumar<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 8150-180416-225341<br>
+                            Qualification : M.Tech (PE)<br>
+                            Experience : ...<br><br>
+                            <hr><b>Subjects Taught</b>
+                            ...<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            ...<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Naresh.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. C Naresh Kumar<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 3802-150427-160027<br>
+                            Qualification : M.Tech (EPS)<br>
+                            Experience : 7 Years<br><br>
+                            Contact: cnkumar321@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            PS-I,ps-II,EM-I,EM-II,EDS,PSA,PSOC,BEE<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            ...<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Priyadarshini.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mrs. Priyadarshini<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 8675-190116-194359<br>
+                            Qualification : M.Tech (DS&CE)<br>
+                            Experience : ...<br><br>
+                            <hr><b>Subjects Taught</b>
+                            ...<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            ...<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Arnold.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mr. B Y Arnold<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 0604-160216-130601<br>
+                            Qualification : M.Tech (EPS)<br>
+                            Experience : ...<br><br>
+                            <hr><b>Subjects Taught</b>
+                            ...<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            ...<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Kalpana.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Ms. P Kalpana<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 5080-190503-104156<br>
+                            Qualification : M.Tech (PE&D<br>
+                            Experience : 2 years<br><br>
+                            Contact : punnakalpana@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            Power system-I, Power system-ll, switch gear and protection,electrical machines electro
+                            magnetic fields<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Power system<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Thasleem.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Ms. Thasleem Begum<span> Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 0850-190112-100344<br>
+                            SBTET REG ID : 11749-19256<br>
+                            Qualification : Ms. M.Tech (PE)<br>
+                            Experience : 2 years<br><br>
+                            Contact: asleembegum203@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            AC Machines,DC Machines, electric traction,BEE,Elactrical management and
+                            entrepreneurship<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Renewable energy sources<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/k-naresh.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4"> K Naresh<span> Lecturer</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : ...<br>
+                            SBTET REG ID : 11749-18540<br>
+                            Qualification : B Tech<br>
+                            Experience : 4 years<br>
+                            Contact: K.naresh0228@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            EEMI, ET<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Electrical machines<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="Assets/eee/Suvarnalatha.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">C Suvarnalatha<span> Lecturer</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : ...<br>
+                            SBTET REG ID : 11749-18541<br>
+                            Qualification : B.tech<br>
+                            Experience : 3 years<br>
+                            Contact : suvarnalatha.chikine@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            Power Systems BEE DC Machines and Electrical Circuits<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Power System<br><br></div>
+                    </div>
+
+                </div>
+
+                <div id="labsinfastructure" class="container tab-pane fade"><br>
+                    <h3>LABS & INFRASTRUCTURE</h3>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>PROGRAM</th>
+                            <th>COURSE CODE</th>
+                            <th>COURSE NAME/LAB</th>
+                            <th>NO.OF SYSTEMS</th>
+                            <th>BLOCK</th>
+                            <th>LH/LAB NO</th>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="publications" class="container tab-pane fade"><br>
+                    <h3>EVENTS</h3>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>DATE</th>
+                            <th>TITLE</th>
+                            <th>DISCRIPTION</th>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="events" class="container tab-pane fade"><br>
+                    <h3>EVENTS</h3>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>DATE</th>
+                            <th>TITLE</th>
+                            <th>DISCRIPTION</th>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div id="achivements" class="container tab-pane fade"><br>
+                    <h3>ACHIEVEMENTS/PLACEMENTS</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>S.NO</th>
+                            <th>PROGRAM</th>
+                            <th>COURSE CODE</th>
+                            <th>COURSE NAME/LAB</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div id="syllabus" class="container tab-pane fade"><br>
+                    <h3>SYLLABUS</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>REGULATION</th>
+                            <th>YEAR</th>
+                        </tr>
+                        <tr>
+                            <td>R-16</td>
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R16_B.Tech_Civil_Engineering_IV_Year_Revised_Syllabus.pdf">IV
+                                    Year</a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="3">R-18</td>
+                            <td><a
+                                    href="https://drive.google.com/file/d/13Aml-eJ0EagE3tRVDXyQaTcJOvVSwgti/view?usp=sharing">III
+                                    Year</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://files.jntufastupdates.com/download/r18-b-tech-eee-iiyear-syllabus/">II
+                                    Year</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://files.jntufastupdates.com/download/r18-b-tech-i-year-syllabus-of-eee-cse-it/?wpdmdl=30497&amp;refresh=600cf18f878e91611461007">I
+                                    Year</a>
+                            </td>
+                        </tr>
+
+                    </table><br><br><br>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <div id="footer"></div>
+</body>
+
+</html>

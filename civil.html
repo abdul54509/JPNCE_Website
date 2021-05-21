@@ -1,0 +1,1980 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+    </script>
+
+
+    <title>CIVIL ENGINEERING</title>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+            $('#jpncenavbar').load('navbar.html');
+        });
+    </script>
+</head>
+
+<body>
+    <style>
+        .profile-head {
+            transform: translateY(5rem)
+        }
+
+        .cover {
+            background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .profile-card {
+            background-color: #222222;
+            margin-bottom: 0px;
+            margin-left: -15px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            position: absolute;
+            top: -65px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            max-width: 100px;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+
+        .profile-info {
+            color: #BDBDBD;
+            padding: 30px;
+            padding-left: 40px;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .profile-info h2 {
+            color: #E8E8E8;
+            letter-spacing: 4px;
+            padding-bottom: 12px;
+        }
+
+        .profile-info span {
+            display: block;
+            font-size: 12px;
+            color: #4CB493;
+            letter-spacing: 2px;
+        }
+
+        .profile-info a {
+            color: #4CB493;
+        }
+
+        .profile-info i {
+            padding: 15px 35px 0px 35px;
+        }
+
+
+        .profile-card:hover .profile-pic {
+            transform: scale(1.1);
+        }
+
+        .profile-card:hover .profile-info hr {
+            opacity: 1;
+        }
+
+
+
+
+        /* Underline From Center */
+        .hvr-underline-from-center {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hvr-underline-from-center:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 52%;
+            right: 52%;
+            bottom: 0;
+            background: #FFFFFF;
+            border-radius: 50%;
+            height: 3px;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .profile-card:hover .hvr-underline-from-center:before,
+        .profile-card:focus .hvr-underline-from-center:before,
+        .profile-card:active .hvr-underline-from-center:before {
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #CECECE;
+            border-radius: 0;
+        }
+         #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+    </style>
+    <div id="jpncenavbar"></div>
+    <div class="container">
+         <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/civil.html">CIVIL</a></li>
+                <li><a href="http://jpnce.epizy.com">Home</a></li>
+            </ul>
+        </div>
+        <h1>CIVIL ENGINEERING</h1>
+        <hr>
+        <div class="container">
+            <h3>About the department :</h3><br>
+            <p>The civil engineering department was established in the year 2009 and is gaining popularity as one of the
+                strongest department in JPNCE. It started with a modest intake of 60 and is increased to 120 this year
+                in addition to 60 in the Polytechnic course.<br><br>
+
+                The department has a strong team of dedicated and qualified faculty, specialised in all fields of Civil
+                Engineering along with two doctorates. To enrich knowledge and strengthen the academic activities, the
+                department is drawing experts from various streams of Civil Engineering and arranging invited lectures
+                on various topics.<br><br>
+
+                The faculty members of the department are raring to go with all preparedness in order to make a
+                difference in nurturing the budding Civil Engineers.<br><br>
+                <h4>CIVIL Mission & Vision :</h4><br>
+                <h5>Mission :</h5>
+                In order to prepare potential and productive persons in industry and academia as well as in government
+                sector. in the graduate programs of the Department of CSE of JPNCE an excellent environment of teaching,
+                learning, and research in computing.<br><br>
+
+                <h5>Vision:</h5><br>
+                To develop Civil Engineering Department as a centre of excellence for imparting value based education to
+                the students at under-graduate and post-graduate level to meet industry needs and to develop as a major
+                research centre to meet the national and international standards<br><br>
+            </p>
+
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">DEPARTMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">HOD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu2">FACULTY & STAFF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu3">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu4">LABS & INFRASTRUCTURE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu5">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu6">ACHIEVEMENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu7">TIME TABLES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu8">SYLLABUS</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <h3>About the DEPARTMENT </h3><br>
+                    <h4>Job Prospects</h4><br>
+                    <p>Now-a- days, we are witnessing unprecedented infrastructural development throughout the world.
+                        Civil Engineers can find jobs in Government departments, private and public sector industries,
+                        research and teaching institutions etc. They are taking up challenging jobs across the Globe.
+                        Civil engineers are employed in all the major construction projects carried out by the state or
+                        central government, the railways, private construction companies, military, engineering
+                        services, consultancy services etc. Civil engineers will always be needed to maintain and repair
+                        existing facilities and structures and to construct new ones. After doing B. Tech, one can look
+                        for jobs in road projects, building work, consultancy firms, quality testing laboratories or
+                        housing societies. Civil engineering graduates can also go in for research and take up teaching
+                        or they can open their own independent consultancy services. Activities Civil Engineering
+                        students in JPNCE participate in the construction activity of the college by bounding hands with
+                        our builders. Apart from this, they are also gaining more practical knowledge on the recent
+                        trends in construction by visiting construction sites and research centers in and around
+                        Hyderabad. Internships and industrial visits are arranged to gain more practical knowledge.<br>
+                    </p>
+                    <h4>RESEARCH AREAS</h4><br>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Structural Engineering</th>
+                                <td>Material Testing, structural design and project management.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Water Resources Engineering</th>
+                                <td>Watershed Management using GIS.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Geo-Technical Engineering</th>
+                                <td>Soil testing and design of soil structural elements.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Transportation Engineering</th>
+                                <td>Transportation Planning, pavement material characterization, traffic analysis and
+                                    road safety modeling.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Environmental Engineering</th>
+                                <td>Water and air quality testing.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RS & GIS</th>
+                                <td>Vehicle tracking, Car Navigation , Spatial Modeling, Accident Detection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br><br>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <div class="row py-5 px-4">
+                        <div class="col mx-auto">
+                            <!-- Profile widget -->
+                            <div class="bg-white shadow rounded overflow-hidden">
+                                <div class="px-4 pt-0 pb-4 cover">
+                                    <div class="media align-items-end profile-head">
+                                        <div class="profile mr-3"><img src="Assets/civil/civilhod.jpg" alt="Khaja begum"
+                                                width="130" class="rounded mb-2 img-thumbnail img-circle"></div>
+                                        <div class="media-body mb-5 text-white">
+                                            <h4 class="mt-0 mb-0">Khaja begum</h4>
+                                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>HEAD OF THE
+                                                DEPARTMENT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-light p-4 d-flex justify-content-end text-center">
+
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">About</h5>
+                                    <div class="p-4 rounded shadow-sm bg-light mt-2">
+                                        <p>
+                                            Miss. Khaja Begum is a research scholar with more than seven years of
+                                            experience in Civil engineering. She has completed her MTech in structural
+                                            engineering from SREE VISHVESHWARIYA INSTITUTE OF TECHNOLOGY AND SCIENCE. IN
+                                            YEAR 2016. <br>She worked as an assistant professor in civil department and
+                                            later promoted as Civil Diploma Head of the department (HOD) in 2014. She
+                                            was persuing her Ph.D. in structural engineering from Osmania University
+                                            Hyderabad. She has undertaken many b.tech projects flowed by diploma
+                                            projects.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">About</h5>
+                                    <div class="p-4 rounded shadow-sm bg-light mt-2">
+                                        <pre>
+ JNTUH ID           : 5652-150413-164625<br>
+ Designation        : HEAD OF THE DEPARTMENT, Asst. Professor<br>
+ Years of Experience: ...<br>
+ Email              : civil@jpnce.ac.in<br>
+ Phone              : 8886680001
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Qualification:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        B.Tech(CIVIL), M.Tech(CIVIL),
+                                        HOD, Department of CIVIL
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Subjects Taught:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Design of steel structures, reinforced cement Concrete , concrete technology
+                                        lab.
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Areas of Specialization:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Image Processing, Artificial Intelligence, Computer Networks and Cloud Computing
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">DETAILS OF CONFERENCES/SEMINARS/WORKSHOPS/PAPERS :</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th>YEAR</th>
+                                                <th>CONFERENCES/SEMINARS/WORKSHOPS ATTENDED</th>
+                                                <th>TITLE OF PAPER PRESENTED/JOURNAL</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5th – 9th June </th>
+                                                <td>Participated Webiner</td>
+                                                <td>Recent trends and Research scope in civil engineering</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">06th-10th July</th>
+                                                <td>Participated Webiner</td>
+                                                <td>Recent trends and Research scope in civil engineering</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5th – 9th June</th>
+                                                <td>Participated 5 days webinar</td>
+                                                <td>special concrete & it’s application</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">8th-13th June.</th>
+                                                <td>Participated webinar</td>
+                                                <td>Performance of engineering structures under extreme loading</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">26th June</th>
+                                                <td>Participated Webnier</td>
+                                                <td>failure of concrete structures</td>
+                                            </tr>
+                                            <tr>th – 9th
+                                                <th scope="row">2nd-4th July</th>
+                                                <td>Attended three days faculty development program</td>
+                                                <td>Research paper Drafting, fundings patent methodologies</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">06th-10th July</th>
+                                                <td>Participated Webiner</td>
+                                                <td>Recent trends and Research scope in civil engineering</td>
+                                            </tr>
+                                        </table>
+                                        <h4>International conference on Recent Advances in civil engineering
+                                            infrastructure 16-18 Dec 2019</h4>
+                                        <p>
+                                            1) Analysis and Design of a Multi Storied Building with Shear Wall by using
+                                            STAAD PRO.<br>
+                                            2) Stabilization of Fine Aggregate with waste Foundry Sand.
+                                        </p>
+                                        <h4>PUBLICATIONS :</h4>
+                                        <p>
+                                            1. Durability of Polypropylene Fiber Reinforced Concrete Partially using
+                                            recycled aggregate and Manufactured sand.<br>
+                                            2. Durability of Recycle Aggregate Concrete using chopped Basalt Fiber.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/civilhod.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Miss. Khaja Begum<span>HOD</span></h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+
+                            JNTUH REG ID : 5652-150413-164625<br>
+                            Qualification : ...<br>
+                            Experience : ...<br>
+                            Contact : ...<br>
+                            <hr><b>Subjects Taught:</b>
+                            Design of steel structures, reinforce concrete cement , concrete technology lab.
+                            <hr><b>Area of
+                                Interest:</b>
+                            <br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/thotapali.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Thotapali Ram Mohan
+                                        Rao<span>Assistant
+                                            Professor</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 27150405-165608<br>
+                            Qualification : M.TECH<br>
+                            Experience : 12 YEARS<br>
+                            Contact : ramu681@rediffmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SURVEYING,BMCP,CT,TE,CM
+                            <hr><b>Area of
+                                Interest:</b>
+                            TRANSPORTATION ENGINEERING<br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/quayyum.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Quayyum MD<span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 5705-150415-152144<br>
+                            Qualification : M.TECH<br>
+                            Experience : 6.5 YEARS<br>
+                            Contact : quayyummd1989@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SM-I,SA-I,WM,EM,CT,GE-I,GE-II,
+                            <hr><b>Area of
+                                Interest:</b>
+                            STRUCTURAL ENGINEERING<br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center pb-4">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/kenche.jpg" width="100px" height="100px">
+                                    <h5 class="hvr-underline-from-center mt-4">Kenche Jagadeeswar<span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 5437-150410-141001<br>
+                            Qualification : M.TECH<br>
+                            Experience : 6.5 YEARS<br>
+                            Contact : kjagadesh1975@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            TE-I, EG,EG LAB,RRS,TE-II
+                            <hr><b>Area of
+                                Interest:</b>
+                            TRANSPORTATION ENGINEERING, HIGHWAY ENGINEERING, ENGINEERING
+                            GEOLOGY<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/ghouse.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mohammed Ghouse <span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 6471-150415-142107<br>
+                            Qualification : M.TECH<br>
+                            Experience : 5.5 YEARS<br>
+                            Contact : ghouse007soonu@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            DRCS, DSS, SM-I, WRE-II, E & C, BMCP
+                            <hr><b>Area of
+                                Interest:</b>
+                            STRUCTURAL ENGINEERING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/jagadeeshwar.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">J Jagadeeshwar<span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 56067-160307-134334<br>
+                            Qualification : M.Tech<br>
+                            Experience : 5 Years<br>
+                            Contact : jagadish2053@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            SM-1, SM-2, GE-1,FE,WRE-1, I&HS, GIT<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Geo technical & Structural ENGINEERING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/ravi.jpg" width="100px" height="100px">
+                                    <h5 class="hvr-underline-from-center mt-4">K.Ravi Kumar<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 2270-150414-130410<br>
+                            Qualification : M.TECH<br>
+                            Experience : 4.5 Years<br>
+                            Contact : ravicivil131@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SURVEYING,BMCP,CT,TE,CM<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            GEOTECHNICAL ENGINEERING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/shanavaz.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">K Shanavaz Ahmed<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 3381-160307-023938<br>
+                            Qualification : M.Tech<br>
+                            Experience : 5 Years<br>
+                            Contact : shanawazcivil9@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SM-1, SM-2, SA-2, ASD, DRCS, EM<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Structural ENGINEERING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/khaliq.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mohd Abdul Khaliq<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 9155-160309-105658<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 4.5 Years<br>
+                            Contact : khaliq.0072001@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SURVEYING,BMCP,DM,CM,EE<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            STRUCTURAL ENGINEERING, SURVEYING, SM,DM<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/tayyab.jpg" width="100px" height="100px">
+                                    <h5 class="hvr-underline-from-center mt-4">MD Tayyab<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 7781-160310-102136<br>
+                            Qualification : M.TECH<br>
+                            Experience : 5 Years<br>
+                            Contact : mdtayyab1616@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            DRCS, DSS, SM-I, WRE-II, E & C, BMCP<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            STRUCTURAL ENGINEERING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/mujeeb.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">MD Mujeeb<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 3534-160309-163817<br>
+                            Qualification : M.Tech<br>
+                            Experience : 4.5 Years<br>
+                            Contact : mujeenmd@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            EM,,SA, ASD, SURVEY, TOS, CED-I, CED-II,BSD<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            structural engineering<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/anjum.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Mohammad Kotwal Anjum<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 2913-171223-153607<br>
+                            Qualification : M.TECH<br>
+                            Experience : 3 Years<br>
+                            Contact : anjum.mk786@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            BMCP,PSC,FM,I&HS, Professional Ethics<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            STRUCTURAL ENGINEERING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/furquan.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Furquan ahmed Syed<span>Associate
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 2553-180417- 124713<br>
+                            Qualification : M.TECH<br>
+                            Experience : 2 Years<br>
+                            Contact : syed.furquan77@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            PRESTRESS CONCRETE,GIS,GWDM,COI,TE,CM<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Construction, Structural engineering, Gis mapping<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/bharath.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">A Bharath kumar<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 2038-180417- 115841<br>
+                            Qualification : M.TECH(CSE)<br>
+                            Experience : 2 Years<br>
+                            Contact : akulabharathkumar@gmail.com <br>
+                            <hr><b>Subjects Taught:</b>
+                            HYDRAULICS , BMCP, CONSTRUCTION MATERIALS , QC&SC , ENVIRONMENTAL ENGINEERING-II ,
+                            IRRIGATION ENGG, CFR&M<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            STRUCTURES<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/brungi.jpg" width="100px" height="100px">
+                                    <h5 class="hvr-underline-from-center mt-4">Brungi rahul<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 8091-150414-123211<br>
+                            Qualification : M.TECH<br>
+                            Experience : 6 months<br>
+                            Contact : brungi.rahul@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            Irrigation engineering and Transportation Engineering<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Concrete and Structures<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/naresh.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">V NARESH KUMAR<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 4199-150408-112358<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 8 months<br>
+                            Contact : nareshkumar.v007@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            tructural analysis subject of interest : DRCS ,SA , SS.<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            structural engineering<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/fathima.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Fathima Begum<span>Lecturer</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : 18528<br>
+                            Qualification : M.TECH<br>
+                            Experience : 3 Years<br>
+                            Contact : arshiyafathima888@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            Quantity surveying-I&II, Basic surveying,Levelling surveying,<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Qs, Surveying, Ds<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/hafsa.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">HAFSA FIRDOUS<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            FACULTY REG ID : 18524<br>
+                            Qualification : B Tec<br>
+                            Experience : 3 Years<br>
+                            Contact : firdouszoya23@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            BMCP, IE, CTE,TE,EE<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            BMCP, RCS, CT&V<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/bheemaiah.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">G BHEEMAIAH<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : 18525<br>
+                            Qualification : B.Tech<br>
+                            Experience : 3 Years<br>
+                            Contact : bheemaraaganamoni@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            QC&SC, Environmental Engg, HYDRAULICS, ENGG DRAWING, Strength of material, Transportation
+                            Engg and surveying<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Environmental Engg, Hydraulics and Strength of material<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/kuruva.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Kuruva Parashuramudu<span>Lecture</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : 18530<br>
+                            Qualification : B.Tech<br>
+                            Experience : 4 Years<br>
+                            Contact : ramudu119@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            Engineering Drawing,Engineering mechanics,strength of metirials,construction practice,Theory
+                            of structures<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            strength of material,surveying,Quantity Surveying
+                            <br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/vinod.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">M vinod kumar<span>Lecturer</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : 19001<br>
+                            Qualification : B.Tech<br>
+                            Experience : 1 YEARS, 4months<br>
+                            Contact : kumar1vinod1007@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            Building Drawing<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Environmental Engg, Hydraulics and Strength of material<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/srikant.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">CIKKONDRA SRIKANT<span>Lecturer</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : 19263<br>
+                            Qualification : B.Tech<br>
+                            Experience : 10 months<br>
+                            Contact : chikkondrasrikanth@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SURVEYING, IRRIGATION<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            TRANSPORTATION ENGINEERING, SURVEYING,BMCP, IRRIGATION ENGG,<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/soumya.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">BAGADE SOUMYA<span>LAB ASSISTANT</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : ...<br>
+                            Qualification : B.Tech<br>
+                            Experience : ...<br>
+                            Contact : ...<br>
+                            <hr><b>Subjects Taught:</b>
+                            <br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/naveen.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">K NAVEEN KUMAR<span>LAB ASSISTANT</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : ...<br>
+                            Qualification : DIPLOMA<br>
+                            Experience : ...<br>
+                            Contact : ...<br>
+                            <hr><b>Subjects Taught:</b>
+                            <br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/yashoda.jpg" width="100px"
+                                        height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">P YASHODA<span>LAB ASSISTANT</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : ...<br>
+                            Qualification : DIPLOMA<br>
+                            Experience : ...<br>
+                            Contact : ...<br>
+                            <hr><b>Subjects Taught:</b>
+                            <br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/civil/sohail.jpg" width="100px" height="100px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">MOHIUDDIN SOHAI<span>LAB ASSISTANT</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            SBTET REG ID : ...<br>
+                            Qualification : B.TECH<br>
+                            Experience : ...<br>
+                            Contact : ...<br>
+                            <hr><b>Subjects Taught:</b>
+                            <br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Vijay<span>Attender</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="menu3" class="container tab-pane fade"><br>
+                    <h3>Publications</h3><br><br>
+                    <h4>Name of the Faculty:- Mohammed Ghouse</h4>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Title of the Paper</th>
+                            <th>Name of Journal</th>
+                            <th>Volume/Issue</th>
+                            <th>ISSN/ISBN</th>
+                            <th>Year</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>“GREEN CONCRETE (ECO FRIENDLY)”</td>
+                            <td>IJSCER </td>
+                            <td>Vol. 3, No. 3,</td>
+                            <td>ISSN 2319 – 6009 </td>
+                            <td>May 2014 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>"Granulated Blast furnace slag as a replacement Of fine aggregate in concrete “</td>
+                            <td>IJSCER</td>
+                            <td>Vol 7, Issue 4</td>
+                            <td>ISSN 2229-5518</td>
+                            <td>April 2016 </td>
+                        </tr>
+                    </table><br><br>
+                    <h4>Name of the Faculty:- Quayyum Md</h4>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Title of the Paper</th>
+                            <th>Name of Journal</th>
+                            <th>Volume/Issue</th>
+                            <th>ISSN/ISBN</th>
+                            <th>Year</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>“Influence of Calcium Sulphate on Cement Motor and Characteristics Behaviour at
+                                Different Proportions “</td>
+                            <td>IJSCER </td>
+                            <td>Vol. 2 Issue. 6</td>
+                            <td>Issn 2250-3005 </td>
+                            <td>Oct 2012 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>“Effects in Buildings Due To Seismic Pounding”</td>
+                            <td>IJHSSI</td>
+                            <td>Volume 6 Issue 2</td>
+                            <td>ISSN (Online): 2319 – 7722, ISSN (Print): 2319 – 7714</td>
+                            <td>Feb 2017</td>
+                        </tr>
+                    </table><br><br>
+                    <h4>Name of the Faculty:- K.Jagadeeswar</h4>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Title of the Paper</th>
+                            <th>Name of Journal</th>
+                            <th>Volume/Issue</th>
+                            <th>ISSN/ISBN</th>
+                            <th>Year</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>“Automatic Railway Gate Control system “
+
+                                Pages-809-815</td>
+                            <td>RAJAR</td>
+                            <td>Volume 3, Issue 01 </td>
+                            <td>ISSN (e): 2394-6709</td>
+                            <td>Jan-2017 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td> “PERPETUATION OF AIRPORT PAVEMENTS”</td>
+                            <td>IJSCER</td>
+                            <td>Vol. 2, No. 4</td>
+                            <td>ISSN 2319 – 6009</td>
+                            <td>Nov 2013 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td> “ROAD SAFTEY AUDIT USING GIS”</td>
+                            <td>IJSCER</td>
+                            <td>Vol. 1, No. 2</tISSN 23d>
+                            <td>ISSN 2455-7714</td>
+                            <td>July 2016 </td>
+                        </tr>
+                    </table><br><br>
+                    <strong>Name of the Faculty:- Khaja Begum
+                    </strong>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><strong>S.no</strong></td>
+                                <td>
+                                    <p align="center"><strong>Title of the Paper</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Name of Journal</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Volume/Issue</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>ISSN/ISBN</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Year</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">1.</p>
+                                </td>
+                                <td>
+                                    <p align="center">&#8220;ANALYSIS AND DESIGN OF A MULTI STORIED BUILDING</p>
+                                    <p align="center">WITH SHEAR WALL BY USING STAAD PRO&#8221;</p>
+                                </td>
+                                <td>
+                                    <p align="center">IJESM</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Vol 8 Issue 1</em></p>
+                                </td>
+                                <td>
+                                    <p align="center">ISSN-2277-5528</p>
+                                </td>
+                                <td>
+                                    <p align="center">Jan 2018</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <strong>Name of the Faculty:- Md Khaliq</strong>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><strong>S.no</strong></td>
+                                <td>
+                                    <p align="center"><strong>Title of the Paper</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Name of Journal</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Volume/Issue</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>ISSN/ISBN</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Year</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">1.</p>
+                                </td>
+                                <td>
+                                    <p align="center"> &#8220;Effects in Buildings Due To Seismic Pounding&#8221;</p>
+                                </td>
+                                <td>
+                                    <p align="center">IJHSSI</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Volume 6 Issue 2</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN (Online): 2319 – 7722, ISSN (Print): 2319 – 7714</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>February. 2017</em></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <strong>Name of the Faculty:- V Aparna</strong>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><strong>S.no</strong></td>
+                                <td>
+                                    <p align="center"><strong>Title of the Paper</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Name of Journal</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Volume/Issue</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>ISSN/ISBN</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Year</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">1.</p>
+                                </td>
+                                <td>
+                                    <p align="center">Solar power energy prospects of development in India</p>
+                                </td>
+                                <td>
+                                    <p align="center">International journal for core engineering management (IJCEM)</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Special Issue of ICCEMT-2015, PP:265-279</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN: 2348-9510</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>December, 2015</em></p>
+                                    <p align="center"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">2.</p>
+                                </td>
+                                <td>
+                                    <p align="center">Fabrication of paper brick with partial replacement of cement</p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center">International journal for core engineering management (IJCEM)</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Special Issue of ICCEMT-2015, PP:265-279</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN: 2348-9510</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>December, 2015</em></p>
+                                    <p align="center"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">3.</p>
+                                </td>
+                                <td>
+                                    <p align="center">Study on strength of compacted mud walls is compared with fly ash
+                                        concrete bricks</p>
+                                </td>
+                                <td>
+                                    <p align="center">International journal for core engineering management (IJCEM)</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Special Issue of ICCEMT-2015, PP:265-279</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN: 2348-9510</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>December, 2015</em></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">4.</p>
+                                </td>
+                                <td>
+                                    <p align="center">Technical usage of fiber reinforced concrete (Glass fiber)</p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center">International Journal of Advanced Technology in Engineering and
+                                        Science (IJATES)</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Volume05 / Issue07</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN: 2348-7550</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>July, 2017</em></p>
+                                    <p align="center"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">5.</p>
+                                </td>
+                                <td>
+                                    <p align="center">Lift Irrigation schemes-advantages</p>
+                                </td>
+                                <td>
+                                    <p align="center">International Journal of Advanced Technology in Engineering and
+                                        Science (IJATES)</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Volume05 / Issue07</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN: 2348-7550</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>July, 2017</em></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">6.</p>
+                                </td>
+                                <td>
+                                    <p align="center">Design and Comparative study on Multi Storey structure in Seismic
+                                        zones</p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center">International Journal of Advanced Technology in Engineering and
+                                        Science (IJATES)</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Volume05 / Issue07</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN: 2348-7550</em></p>
+                                    <p align="center"></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>July, 2017</em></p>
+                                    <p align="center"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <strong>Name of the Faculty:- Syed Furquan Ahmed </strong>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><strong>S.no</strong></td>
+                                <td>
+                                    <p align="center"><strong>Title of the Paper</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Name of Journal</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Volume/Issue</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>ISSN/ISBN</strong></p>
+                                </td>
+                                <td>
+                                    <p align="center"><strong>Year</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">1.</p>
+                                </td>
+                                <td>
+                                    <p align="center">&#8221; Foam Concrete &#8220;</p>
+                                </td>
+                                <td>
+                                    <p align="center">IJCER</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Vol. 8 pp. 1-14</em></p>
+                                </td>
+                                <td>
+                                    <p align="center">ISSN 2278-3652</p>
+                                </td>
+                                <td>
+                                    <p align="center">2017</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="center">2.</p>
+                                </td>
+                                <td>
+                                    <p align="center"> &#8220;Experimental
+                                        investigation of
+                                        strength
+                                        characteristic of
+                                        foam concrete.&#8221;</p>
+                                </td>
+                                <td>
+                                    <p align="center">IJATIR</p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>Volume 09 Issue 09</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>ISSN 2348-2370</em></p>
+                                </td>
+                                <td>
+                                    <p align="center"><em>2017</em></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="menu4" class="container tab-pane fade"><br>
+                    <h3>LABS & INFRASTRUCTURE</h3>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Name of the lab</th>
+                            <th>Year and Sem</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>SURVEYING LAB</td>
+                            <td>II – I </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>ENGINEERING GEOLOGY LAB</td>
+                            <td>II – I</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>STRENGTH OF MATERAILS LAB</td>
+                            <td>II – I </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>COMPUTER AIDED CIVIL ENGINEERING DRAWING</td>
+                            <td>II – II </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB</td>
+                            <td>II – II </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>HYDRAULICS AND HYDRAULIC MACHINERY LAB</td>
+                            <td>II – II </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>STRENGTH OF MATERAILS LAB</td>
+                            <td>II – I </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>STRENGTH OF MATERAILS LAB</td>
+                            <td>II – I </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>GENDER SENSITIZATION LAB</td>
+                            <td>II – II </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>HIGHWAY ENGINEERING AND CONCRETE TECHNOLOGY</td>
+                            <td>III – I </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>GEOTECHNICAL ENGINEERING LAB</td>
+                            <td>III – I </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>ADVANCED COMMUNICATION SKILLS LAB</td>
+                            <td>III – I </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>ENVIRONMENTAL ENGINEERING LAB</td>
+                            <td>III – II </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>COMPUTER AIDED DESIGN LAB</td>
+                            <td>III – II </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>ENVIRONMENTAL ENGINEERING LAB</td>
+                            <td>IV – I </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>TRANSPORTATION ENGINEERING LAB</td>
+                            <td>IV – I </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div id="menu5" class="container tab-pane fade"><br>
+                    <h3>EVENTS</h3>
+                    <p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S.No</th>
+                                    <th scope="col">EVENTS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>“Ultra tech cement “conducted two days workshop for diploma 3rd year student and
+                                        issued to the participants .</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Former Indian cricket team captain Srikanth sir chief guest in 2017 graduation
+                                        day jpnce</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Aditional director general of police Dr Jitendra sir, chief guest in 2018
+                                        graduation day jpnce</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Jpnce conducted tech utasav in Shalimar garden 3rd& 4 &5th jan 2019</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Technical quiz conducted by civil dept 04/11/2019</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Two day’s REVIT WORK shop conducted by civil dept. 18 Feb 2020 for final year
+                                        students</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>Two day’s REVIT WORK shop conducted by civil dept. 05-06 march 2020 for 3rd year
+                                        students</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>Jpnce civil students are visited jurala dam to knowing the spillway type radial
+                                        gate and the barrage on krishna river in 28 feb 2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>Jpnce civil students are visited koli sagar dam 2018</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>Department of CIVIL Engineering is organized the 2ndNational level E-Quiz on the
+                                        “CONCEPTS OF CIVIL ENGINEERING”on 08/07/2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td>UltraTech cement conducted “One day workshop regarding manufacturing process of
+                                        cement” and issued certificates to participating students.</td>
+                                </tr>
+                            </tbody>
+                        </table><br><br><br>
+                    </p>
+                </div>
+                <div id="menu6" class="container tab-pane fade"><br>
+                    <h3>ACHIEVEMENTS/PLACEMENTS</h3>
+                    <p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S.No</th>
+                                    <th scope="col">ACHIEVEMENTS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Facilitation for master to eshwar chandra for achieving gold medal from JNTUH in
+                                        2017</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Paper presentation at national level symposium organised by Nalla Narshima Reddy
+                                        Group of Institutions on 28 and 29 February 2020.<br>
+                                        Shujja stood 1st prize</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Postal presentation at national level symposium organised by Nalla Narshima
+                                        Reddy Group of Institutions on 28 and 29 February 2020.<br>
+                                        Sara stood 1st prize money,certificate and shield trophy.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Shujja Uddin final year student of jpnce is Finalist contestant of the pageant
+                                        Telangana’s Next Top Model 2019 in dec 2019</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>
+                                        <p>Name :E.venu<br>
+                                            Roll no:16361A03<br>
+                                            Branch:civil engineering<br>
+                                            NCC Roll number:TS17SDA165926<br>
+                                            Achievements in NCC:<br>
+                                            &nbsp&nbsp&nbspI)Participated and selected for”Republic day parade camp RDC
+                                            2020″(IGC)<br>
+                                            &nbsp&nbsp&nbspInter Group Competition. I.e. 22-08-2019 to30-12-2019.<br>
+                                            &nbsp&nbsp&nbspII) Promoted as Junior under officer(JUO) on 26-01-2020<br>
+                                            &nbsp&nbsp&nbspIII) selected for National Integration Camp (NIC)from
+                                            telangana from
+                                            &nbsp&nbsp&nbsp03-01-2020 to20-01-2020.Place (Arunachal pradesh)<br>
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(a)achieved gold medal in Art and Craft 1st
+                                            all india<br>
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(b) Achieved gold medal in group dance 1st<br>
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(c) Achieved gold medal in NIAP programme.<br>
+                                        </p>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+                <div id="menu7" class="container tab-pane fade"><br>
+                    <h3>TIME TABLES</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>S.NO</th>
+                            <th>YEAR</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/CIVIL-2ND-YEAR.pdf">II-I</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/CIVIL-3rd-year.pdf">III-I</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/CIVIL-4TH-year-TT.pdf">IV-I</a>
+                            </td>
+                        </tr><br><br><br>
+                    </table>
+                </div>
+                <div id="menu8" class="container tab-pane fade"><br>
+                    <h3>SYLLABUS</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>REGULATION</th>
+                            <th>YEAR</th>
+                        </tr>
+                        <tr>
+                            <td>R-16</td>
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R16_B.Tech_Civil_Engineering_IV_Year_Revised_Syllabus.pdf">IV
+                                    Year</a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="3">R-18</td>
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R18B.Tech_.CivilEngg.IIIYearSyllabus.pdf">III
+                                    Year</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R18_B.TECH_CIVIL_ENGG_II_Year_Syllabus.pdf">II
+                                    Year</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://files.jntufastupdates.com/download/r18-b-tech-i-year-syllabus-of-non-circuit-branches/?wpdmdl=30498&amp;refresh=600cfe3d9c11e1611464253">I
+                                    Year</a>
+                            </td>
+                        </tr>
+
+                    </table><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

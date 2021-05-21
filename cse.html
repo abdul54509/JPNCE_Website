@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+    </script>
+
+    <title>COMPUTER SCIENCE ENGINEERING</title>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+            $('#jpncenavbar').load('navbar.html');
+        });
+    </script>
+</head>
+
+<body>
+    <style>
+        .profile-head {
+            transform: translateY(5rem)
+        }
+
+        .cover {
+            background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .profile-card {
+            background-color: #222222;
+            margin-bottom: 0px;
+            margin-left: -15px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            position: absolute;
+            top: -65px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            max-width: 100px;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+
+        .profile-info {
+            color: #BDBDBD;
+            padding: 30px;
+            padding-left: 40px;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .profile-info h2 {
+            color: #E8E8E8;
+            letter-spacing: 4px;
+            padding-bottom: 12px;
+        }
+
+        .profile-info span {
+            display: block;
+            font-size: 12px;
+            color: #4CB493;
+            letter-spacing: 2px;
+        }
+
+        .profile-info a {
+            color: #4CB493;
+        }
+
+        .profile-info i {
+            padding: 15px 35px 0px 35px;
+        }
+
+
+        .profile-card:hover .profile-pic {
+            transform: scale(1.1);
+        }
+
+        .profile-card:hover .profile-info hr {
+            opacity: 1;
+        }
+
+
+
+
+        /* Underline From Center */
+        .hvr-underline-from-center {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hvr-underline-from-center:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 52%;
+            right: 52%;
+            bottom: 0;
+            background: #FFFFFF;
+            border-radius: 50%;
+            height: 3px;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .profile-card:hover .hvr-underline-from-center:before,
+        .profile-card:focus .hvr-underline-from-center:before,
+        .profile-card:active .hvr-underline-from-center:before {
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #CECECE;
+            border-radius: 0;
+        }
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+    </style>
+    <div id="jpncenavbar"></div>
+    <div class="container">
+        <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/cse.html">COMPUTER SCIENCE ENGINEERING</a></li>
+                <li><a href="http://jpnce.epizy.com">HOME</a></li>
+            </ul>
+        </div>
+        <h1>COMPUTER SCIENCE ENGINEERING</h1>
+        <hr>
+        <div class="container">
+            <h3>About the department :</h3>
+            <p>The Department of Computer Science and Engineering (CSE) was established in the year 1997. The Department
+                offers qualitative training and scope for more research. The Dept. provides state-of- art computing
+                facilities to the students. It also promotes active industry-institute collaboration by identifying
+                areas of undergraduate and postgraduate degree students. The Courses offered in the department meet the
+                requirements of both industry and research. The curriculum is designed to train the students in
+                developing application programs (Software) and also designing and developing computing systems
+                (Hardware).
+                <h4>CSE Mission & Vision :</h4><br>
+                <h5>Mission :</h5>
+                In order to prepare potential and productive persons in industry and academia as well as in government
+                sector. in the graduate programs of the Department of CSE of JPNCE an excellent environment of teaching,
+                learning, and research in computing.<br><br>
+
+                In particular, we aim:<br>
+
+                <b>-</b> To produce highly qualified and all-rounded graduate possessing in-depth knowledge of computing
+                and
+                information technology who can provide leadership and service to India and the world.<br>
+                <b>-</b> To pursue creative research and new innovations in Computer Science and Engineering and across
+                disciplines in order to serve the needs of industry, government, society, and the scientific community
+                by expanding and contributing to the body of knowledge in the field.<br>
+                <b>-</b> To develop strong partnerships with industrial and government and non-government agencies,
+                professional
+                societies, and local communities.<br><br>
+                <h5>Vision:</h5><br>
+                To be recognized as the leader having proper and recent education and research in the Computer Science
+                and Engineering arena, specially with a strong impact in the timely and targeted areas of research to
+                attract the excellent faculty and students worldwide.<br><br>
+                <h5>Educational Objectives</h5><br>
+                The academic objectives of the Department of Computer Science and Engineering are to provide outstanding
+                education and research programs that can:
+                <b>-</b> Promote a philosophy of learning with the development of a computer science engineering student
+                body to
+                be prepared for their specific profession, for advanced studies and careers in research with
+                multidisciplinary knowledge.<br>
+                <b>-</b> Provide a stimulating academic research environment for individuals who would be capable to
+                work in both
+                industry and academia, and would be the leaders in the demonstration of professional skills and in the
+                development of new technology for the benefit of society.
+
+            </p>
+
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">DEPARTMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">HOD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu2">FACULTY & STAFF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu3">LABS & INFRASTRUCTURE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu4">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu5">ACHIEVEMENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu6">TIME TABLES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu7">SYLLABUS</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <h3>DEPARTMENT</h3>
+                    <p>In the context of Indian contribution in the area of computer application in India as well as in
+                        global level, the department of Computer Science and Engineering has got a pivotal role to play
+                        in producing competent and committed computer professionals.<br><br>
+
+                        Our Department is supported by disciplined and dedicated faculty. They always come forward to
+                        enhance the Excellency of the department academically. We own a crowning glory in the list of
+                        its achievements. Backed with this academic excellence, more than 70% of our students are being
+                        placed in different reputed MNC’s every year, setting bench marks in the campus
+                        recruitments.<br><br>
+
+                        The department is headed by Dr. K. Guru Raghavendra Reddy. The department has eminent,
+                        experienced and dynamic teaching faculty, to guide the students. Started with an intake of 60 in
+                        years 97-98, today, it has grown up to 120. It also consists of PG Course M.Tech (CSE) with an
+                        intake of 18 Our department own 750 higher and configured machines with all the required
+                        licenced software. We are proud to say, our department has modeled itself into a trend setting
+                        one and act as a reference to others.<br><br>
+
+                        Our department has the State-of-art kind of laboratories with a 24 hour Internet facility
+                        accessible to both faculty and students.We have a department library for faculty as well as
+                        students.<br><br>
+
+                        The faculty and students are encouraged to attend the workshops and seminars within the campus
+                        as well as organized by several institutions and JNTU. Many of our students won first and second
+                        prizes in various paper presentations held at various places.<br><br>
+
+                        Many of our students are well equipped with various latest Microsoft Technologies and other
+                        programming skills. They developed several app’s and successfully uploaded into Windows Store.
+                        From windows store , many people from various countries downloaded and used them.<br><br>
+
+                        Many our students have secured more than 90 percentage in recent Gate exam and also they obtain
+                        high scores in GRE,TOEFL&IELTS exams.<br><br>
+
+                        The students made habituation of doing in house project as a part of their academics. They are
+                        provided with a platform in the department where they can turn their innovative ideas into
+                        Projects and models. The faculty and students are encouraged to attend the workshops and
+                        seminars within the campus as well as organized by several institutions and JNTU. Many of our
+                        students achieved awards in various paper presentations held at various places.<br><br>
+
+                        The students of CSE department have formed an association by name ”Wunder kinds”, where they
+                        conduct personality development programs, technical quiz’s, and group discussions among them
+                        selves to understand the developments in the technology.<br><br>
+
+                        The pass percentage of our department is always 75% and also than 70% of our final year students
+                        have already being selected in various MNC’s and companies.<br><br>
+
+                        Some of the practices of the department like teaching with lesson plans ,conduction of regular
+                        tests, mentoring activities, focusing on weak students, conduction of department level
+                        placement, supporting activities like conducting mock test, interviews and group discussion have
+                        helped the students to achieve greater heights in their academics and placement activities to
+                        add value to their education. Eligible students are well placed in high profile companies like
+                        Infosys, Tech Mahendra, Wipro, Cognizant, Accenture etc. with good packages.</p><br><br><br>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <div class="row py-5 px-4">
+                        <div class="col mx-auto">
+                            <!-- Profile widget -->
+                            <div class="bg-white shadow rounded overflow-hidden">
+                                <div class="px-4 pt-0 pb-4 cover">
+                                    <div class="media align-items-end profile-head">
+                                        <div class="profile mr-3"><img src="Assets/GURU.PNG" alt="Dr. K. Guru Raghavendra Reddy" width="130"
+                                                class="rounded mb-2 img-thumbnail img-circle"></div>
+                                        <div class="media-body mb-5 text-white">
+                                            <h4 class="mt-0 mb-0">Dr. K. Guru Raghavendra Reddy</h4>
+                                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>HEAD OF THE
+                                                DEPARTMENT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-light p-4 d-flex justify-content-end text-center">
+
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">HOD's Message</h5>
+                                    <div class="p-4 rounded shadow-sm bg-light mt-2">
+                                        <p>
+                                            <b>Greetings!</b> On behalf of the faculty members, staff, and students of
+                                            the
+                                            Department of Computer Science and Engineering of Jaya Prakash Narayan
+                                            College of Engineering (JPNCE), Mahabubnagar, I welcome you all to the
+                                            creative world of CSE. I believe that CSE discipline has been widely
+                                            recognized as an essential source and technique for the advancements in all
+                                            spheres of human endeavour now and in future. In JPNCE all the students gets
+                                            the opportunity to excel in their academic and extra curriculum
+                                            activities.<br><br>
+
+                                            Our department is fully equipment by good internet speed, where students
+                                            have a privilege of learning through online courses. Our department has
+                                            started using CISCO Netacademy, Oracle academy and TASK programmes for
+                                            learning latest courses to meet industry requirement.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">About</h5>
+                                    <div class="p-4 rounded shadow-sm bg-light mt-2">
+                                        <pre>
+ JNTUH ID           : 4427-180421-131451<br>
+ Designation        : HEAD OF THE DEPARTMENT, Asst. Professor<br>
+ Years of Experience: 5 Years<br>
+ Email              : cse@jpnce.ac.in<br>
+ Phone              : 8886680005
+                                    </pre>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Qualification:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        B.Tech(CSE), M.Tech(CSE), Ph.D(NIT- RKL)
+                                        HOD, Department of CSE
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Subjects Taught:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        C, C++, Java, Web Technology, Mobile application and development, CO, Computer
+                                        Networks
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <h5 class="mb-0">Areas of Specialization:</h5>
+                                    <div class="p-4 mt-2 rounded shadow-sm bg-light">
+                                        Image Processing, Artificial Intelligence, Computer Networks and Cloud Computing
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/ece/sandeepsir.png" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Dr. Sandeep V.M<span>Professor,
+                                            Dean(Acad)</span></h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+
+                            JNTUH REG ID : 57150406-141835<br>
+                            Qualification : B.E(ECE), M.E(CSE), Ph.D<br>
+                            Experience : 32 Years<br>
+                            Contact : svmandr@yahoo.com
+                            <hr><b>Subjects Taught:</b>
+                            DS, DAA, DA, AI, DBMS, CN, OOAD, OS, FLAT, DLD, OOPS, COMS, DS, IS, PE, EMTL, NTL, AWP, MP,
+                            MC, STAT
+                            <hr><b>Area of
+                                Interest:</b>
+                            Image Processing, Speech Recognition, Artificial Intelligence, Machine learning, Pattern
+                            Recognition, Cognitive science, Data Science and project building<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                     <img class="profile-pic" src="Assets/GURU.PNG" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Dr. K. Guru Raghavendra
+                                        Reddy<span>Asst.Professor, HOD</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 4427-180421-131451<br>
+                            Qualification : B.Tech(CSE), M.Tech(CS), Ph.D(NIT Rourkela)<br>
+                            Experience : 5 years<br>
+                            Contact : guru.cse11@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            C, C++, Java, Web Technology, Mobile application and development, CO, CN
+                            performance management, managerial economics, learning and development and consumer
+                            behaviour
+                            <hr><b>Area of
+                                Interest:</b>
+                            Image Processing, Artificial Intelligence, Computer Networks and Cloud Computing<br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/jamuna.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">D. Jamuna<span>Associate Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 61150405-220905<br>
+                            Qualification : B.E (CSE), M.Tech(SE)<br>
+                            Experience : 21 Years<br>
+                            Contact : dasari.jamuna@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            Software Testing Methodologies, Computer Graphics, Computer Organization, Operating Systems,
+                            Digital Logic Design, Image processing, Embedded systems, Software engineering, Computer
+                            numerical methods,IRS, Distributed Systems,C
+                            <hr><b>Area of
+                                Interest:</b>
+                            Software Testing , graphics<br><br>
+                        </div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center pb-4">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/radhika.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">K.RADHIKA<span>Associate Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 24150407-152123<br>
+                            Qualification : B.TECH(CSE),M.TECH(SE)<br>
+                            Experience : 14 Years<br>
+                            Contact : radhikakyadagiri@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            WT,JP,OOPS THROUGH JAVA,FLAT,DLD,DBMS,LP,DS,DS THROUGH C++,OOAD,CN,IRS,STM,DSGT,PPL
+                            <hr><b>Area of
+                                Interest:</b>
+                            DATABASES, CLOUD COMPUTING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/saritha.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">P.SARITHA<span>Associate Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+                            JNTUH REG ID : 9444-150420-152513<br>
+                            Qualification : B.TECH (CSIT),M.TECH(SE)<br>
+                            Experience : 12 years<br>
+                            Contact : psaritha19@gmail.com
+                            <hr><b>Subjects Taught:</b>
+                            COMPUTER PROGRAMMING IN C, OS,DBMS, ADSA,LP,WT, DAA,DLD, OOPS THRU JAVA, CC
+                            <hr><b>Area of
+                                Interest:</b>
+                            PROGRAMMING LANGUAGES, DATABASES, DATA SCIENCE, CLOUD COMPUTING<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/nareshg.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">G.Naresh Kumar<span>Assistant
+                                            Professor</span>
+                                    </h5>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 0371-150413-164602<br>
+                            Qualification : M.Tech<br>
+                            Experience : 5 Years<br>
+                            Contact : gnareshkumar468@gmail.com<br>
+                            <hr><b>Subjects Taught</b>
+                            C,IT lab, Linux, Software project management<br><br>
+                            <hr><b>Area of
+                                Interest</b>
+                            Programming , database<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assetscse/rakhesh.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">RAKHESH K<span>Assistant Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 4112-150410-112852<br>
+                            Qualification : B.TECH(CSE),M.TECH(CS)<br>
+                            Experience : 10 Years<br>
+                            Contact : kassavasu@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            DLD,DBMS,CSA,INS,HCI,CD,IRS,ERTOS,STM,PPL,CO,OS,MC,DAA,PPS,PP<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            DATABASES,Algorithms<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/nareshc.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Naresh Kumar C<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 92150407-132325<br>
+                            Qualification : B.Tech(CSE),M.Tech(CSE)<br>
+                            Experience : 09 Years<br>
+                            Contact : nareshivision@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            Computer Programming in C, OOP With C++, OOP through Java,WT, Java Programming, SE, DP,
+                            PPL<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Programming<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/swath.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">A.SWATH<span>Assistant Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 1117-160219-105818<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 7 Years<br>
+                            Contact : swathi.adi585@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            FLAT,CD,DLD,PPS,PPL,CG,MFCS,OOP Through C++,DS,DP,DS through C++<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Programming<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/parkashkchari.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">K. PRAKASHA CHARY<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 3405160218162613<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 5 Years<br>
+                            Contact : prakashkchari@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            PCCN, DISASTER MANAGEMENT<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Computer Networks<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/sadiya.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Sadiya Afsheen<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 6885-180417-155156<br>
+                            Qualification : M.Tech(CSE)<br>
+                            Experience : 2 Years<br>
+                            Contact : mohdjamil27@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            DWDM, WS, SE, COI<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            DM, IRS, FLAT<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/sahfi.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Md Shafiulla<span>Associate
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 2515-150413-124726<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 10 Years<br>
+                            Contact : shafiulla.mohammed@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            PP, CNS, CP DBMS, PPS, C++, IRS, HCI, STM, OS, CO, LP, DP, SE, ASN<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Cloud Computing, Database Administration<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/bhuvaneswari.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">M.Bhuvaneswari<span>Associate
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 4945-161220-143237<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 2 Years<br>
+                            Contact : bhuvanamaram@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            SPPM,WS&SOA,OS<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            database, programming<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/sowjanya.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4"> J.Sowjanya<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 9374-180104-124<br>
+                            Qualification : M.TECH(CSE)<br>
+                            Experience : 2 Years<br>
+                            Contact : sowjanya796@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            C,IT lab, Linux, Software project managemen<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Programming , database<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/sewtha.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">S.Swetha<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 4024-160305-154331<br>
+                            Qualification : M.TECH(CSE)<br>
+                            Experience : 2 Years<br>
+                            Contact : swetha555@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            C,IT lab<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Computer Networks<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/mounika.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">T. Mounika<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 4199-150408-112358<br>
+                            Qualification : B.TECH(CSE),M.TECH(CSE)<br>
+                            Experience : 4 Years<br>
+                            Contact : mounika2mouna@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            C Lab,IT Workshop lab, Linux Lab<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Programming<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/veeranna.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">P.Veeranna<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 5915-150426-162641<br>
+                            Qualification : M.TECH<br>
+                            Experience : 5 Years<br>
+                            Contact : it.jntu@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            C lab and C++ lab<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Programming<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/cse/afreen.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Afreen<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 2606-160305-163647<br>
+                            Qualification : M.TECH<br>
+                            Experience : 1 Years<br>
+                            Contact : afreen.510sj@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            IT Workshop<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Programming<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic" src="Assets/.jpg" width="150px" height="120px">
+
+                                    <h5 class="hvr-underline-from-center mt-4">K. Naresh<span>Assistant
+                                            Professor</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"><br>
+
+                            JNTUH REG ID : 8287-190502-165202<br>
+                            Qualification : B.Tech(IT)<br>
+                            Experience : 5 Years<br>
+                            Contact : kotanaresh@gmail.com<br>
+                            <hr><b>Subjects Taught:</b>
+                            IT workshop and C programmingT<br><br>
+                            <hr><b>Area of
+                                Interest:</b>
+                            Computer Networks<br><br></div>
+                    </div>
+                    <div class="row shadow rounded mx-3 my-4">
+                        <div class="col-4">
+                            <div class="profile-card text-center">
+
+                                <img class="img-fluid"
+                                    src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+
+                                    <img class="profile-pic"
+                                        src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg">
+
+                                    <h5 class="hvr-underline-from-center mt-4">Narsimha<span>Attender</span>
+                                    </h5><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu3" class="container tab-pane fade"><br>
+                    <h3>LABS & INFRASTRUCTURE</h3>
+                    <table class="table table-bordered">
+
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Name of the lab</th>
+                            <th>Room No.</th>
+                            <th>Equipments</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>IT Workshop Lab</td>
+                            <td>120</td>
+                            <td>60 systems(1 Gb RAM,500GB Hard Disk,pentium Core processor)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>C Language lab</td>
+                            <td>121</td>
+                            <td>60 systems(1 Gb RAM,500GB Hard Disk,pentium Core processor)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Systems Lab</td>
+                            <td>122</td>
+                            <td>60 systems(1 Gb RAM,500GB Hard Disk,pentium Core processor)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Programming Lab</td>
+                            <td>123</td>
+                            <td>60 systems(1 Gb RAM,500GB Hard Disk,pentium Core processor)</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>OS Lab</td>
+                            <td>125</td>
+                            <td>60 systems(1 Gb RAM,500GB Hard Disk,pentium Core processor)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Online Lab-1</td>
+                            <td>126</td>
+                            <td>60 systems with thin clients (4 Gb RAM,1 TB Hard Disk, Core2DUO processor)</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Online Lab-2</td>
+                            <td>176</td>
+                            <td>60 systems with thin clients (4 Gb RAM,1 TB Hard Disk, Core2DUO processor)</td>
+                        </tr>
+
+
+                    </table>
+                    <p>
+                        <b>I – II Laboratories</b><br>
+                        &nbsp&nbsp&nbsp&nbspCP Lab <br><br>
+                        <b>II – II Laboratories</b><br>
+                        &nbsp&nbsp&nbsp&nbsp CO Lab <br>
+                        &nbsp&nbsp&nbsp&nbsp DBMS Lab <br>
+                        &nbsp&nbsp&nbsp&nbsp OS Lab <br>
+                        &nbsp&nbsp&nbsp&nbsp GS Lab <br><br>
+                        <b>III – II Laboratories</b><br>
+                        &nbsp&nbsp&nbsp&nbsp CT & WT Lab <br>
+                        &nbsp&nbsp&nbsp&nbsp ACS Lab <br><bR>
+                        <b>Projects</b><br>
+                        &nbsp&nbsp&nbsp&nbsp 14 Batch Projects <br>
+                        &nbsp&nbsp&nbsp&nbsp Our department is fully equipment by good internet speed, where
+                        students have a privilege of learning through online courses. <br><br><br>
+                    </p>
+                </div>
+                <div id="menu4" class="container tab-pane fade"><br>
+                    <h3>EVENTS</h3>
+                    <p>
+                        Our department has started using CISCO Netacademy, Oracle academy, VMWare academy, Google Cloud
+                        and TASK programmes for learning latest courses to meet industry requirement.<br><br><br>
+                    </p>
+                </div>
+                <div id="menu5" class="container tab-pane fade"><br>
+                    <h3>ACHIEVEMENTS/PLACEMENTS</h3>
+                    <p>
+                        We own a crowning glory in the list of its achievements.<br><br><br>
+                    </p>
+                </div>
+                <div id="menu6" class="container tab-pane fade"><br>
+                    <h3>TIME TABLES</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>S.NO</th>
+                            <th>YEAR</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/CSE-IV-Year-300x300.jpeg">IV
+                                    Year</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/CSE-III-Year-300x300.jpeg">III
+                                    Year</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://jpnce.ac.in/wp-content/uploads/2020/11/CSE-II-year-300x300.jpeg">II
+                                    Year</a></td>
+                        </tr><br><br><br>
+                    </table>
+                </div>
+                <div id="menu7" class="container tab-pane fade"><br>
+                    <h3>SYALLBUS</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>REGULATION</th>
+                            <th>YEAR</th>
+                        </tr>
+                        <tr>
+                            <td>R-16</td>
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R16B.TechCSEIVYearRevisedSyllabusWithModifiedDataMiningLab-1.pdf">IV
+                                    Year</a></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">R-18</td>
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R18-B.TECH-CSE-IIIYear-Labs-Syllabus.pdf">III
+                                    Year</a></td>
+                        </tr>
+                        <tr>
+                            
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/R18-B.TECH-CSE-IIYear-Syllabus.pdf">II
+                                    Year</a></td>
+                        </tr>
+                        <tr>
+                            
+                            <td><a
+                                    href="https://jpnce.ac.in/wp-content/uploads/2020/11/jntuh-R18-B.Tech-IYear-Syllabus-EEE-CSE-IT.pdf">I
+                                    Year </a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+    
+</body>
+
+</html>

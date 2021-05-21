@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/favicon.jpeg" type="image/png">
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+
+    </script>
+    <title>WHY JPNCE?</title>
+    <script>
+        $(function () {
+            $('#jpncenavbar').load('navbar.html');
+            $('#footer').load('footer.html');
+        });
+    </script>
+   
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+        * {
+            
+            
+            box-sizing: border-box;
+            
+        }
+
+        #head {
+            position: relative;
+            width:100%;
+            height: 100vh;
+            background: url('Assets/jp1.jpg');
+            background-size: 160%;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        section {
+            width: 100%;
+            padding: 100px;
+            color: #111;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2em;
+        }
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+        }
+
+        /* Background container */
+        #cssmenu-container {
+            height: 220px;
+            background-color: #CEE3F8;
+        }
+
+        /* Menu container */
+        #cssmenu {
+            display: inline-block;
+            /* The menu will have width as needed, not 100% */
+            position: relative;
+            left: 11%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1em;
+            border-radius: 2px;
+            /* Little curvature in the borders */
+            overflow: hidden;
+            /* Hide everything that overflows, like shadows */
+        }
+
+        /* Icons */
+        #cssmenu i {
+            transform: scale(1.4);
+        }
+
+        /* Menu */
+        #cssmenu ul {
+            display: flex;
+            /* A key part of our menu, displays items side by side, and allows reversing them */
+            flex-direction: row-reverse;
+            /* Reverse the items */
+            /* Reset styles, overwrite browser defaults */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cssmenu ul li {
+            margin: 0;
+        }
+
+        /* Menu items */
+        #cssmenu ul li a {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 12px 30px 12px 45px;
+            /* Adjusting padding to get the proper space */
+            margin-left: -20px;
+            /* Pull the items to the left, so the rounded right side will get over them */
+            color: white;
+            background-color: #428EFE;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0 100px 100px 0;
+            /* Get the right side rounded */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            /* Apply the shadow */
+        }
+
+        /* Hover event */
+        #cssmenu ul li:hover a {
+            background-color: #297EFE;
+        }
+
+        /* Remove the shadow for first item, last in the right side when it gets reversed */
+        #cssmenu ul li:first-child a {
+            box-shadow: none;
+        }
+
+        /* Active item is a bit different */
+        #cssmenu ul li.active a {
+            color: #428EFE;
+            background-color: #EEF5FF;
+        }
+
+        /* Remove the shadow for the active's next item, to match the design more accurately */
+        #cssmenu ul li.active+li a {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="head"></div>
+<div id="jpncenavbar" class ="sticky-top"></div>
+        
+    
+        <section>
+            <div id="cssmenu" class="mt-4" align="left">
+            <ul>
+                <li class="active"><a href="http://jpnce.epizy.com/whyjpnce.html">WHY JPNCE ?</a></li>
+                <li><a href="http://jpnce.epizy.com">HOME</a></li>
+            </ul>
+        </div>
+
+            <h2> WHY JPNCE?</h2>
+            <p>JPNCE was established in the year 1997 by experienced academicians and industrialists. The college is
+                continuously supported
+                by a group of technocrats and is guided by renowned professors and administrators. The basic aim is not
+                only to impart
+                quality in technical education but also to follow the principles, morals, ethics and ideals of “Bharatha
+                Ratna” Sri Jaya
+                Prakash Narayan, hence the college name. JPNCE is located in a beautiful lush green environs surrounded
+                by scenic mountains
+                and is at an accessible distance from Hyderabad.</p>
+            <div class="whyjpnce mt-2 mt-md-4">
+                <h3 class="text-center">WHY STUDY AT JPNCE?</h3>
+                <div class="row">
+                    <div class="col-md-6 mt-2 text-md-right">
+                        <div class="card" style="width:100%;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <b>Dedicated Faculties</b><br>
+                                            <p>We proudly hold the record of lowest attrition rate till date
+                                                to accomplish dedication.
+
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img src="icons/1.png" alt="image" width="100%" height=auto>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </li>
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <b>Skill Development Activities</b><br>
+                                            <p>We address the opportunities and challenges to encounter new demands of
+                                                changing global and innovative technologies.
+
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img src="icons/2.png" alt="image" width="100%" height=auto>
+                                        </div>
+                                    </div><br>
+                                </li>
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <b>Excellent Placement Record</b><br>
+                                            <p>We proudly hold a good placement record and assure that each eligible
+                                                student
+                                                gets an opportunity to be placed in a recognized firm.
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img src="icons/3.png" alt="image" width="100%" height=auto>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-2 text-md-left">
+                        <div class="card" style="width:100%;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="icons/4.png" alt="image" width="100%" height=auto>
+
+                                        </div>
+                                        <div class="col-10">
+                                            <b>Disciplined Environment</b><br>
+                                            <p>Mobile App for parents to track the progression of students. Mobile
+                                                phones
+                                                and related gadgets are strictly prohibited for students within the
+                                                institute premises.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="icons/5.png" alt="image" width="100%" height=auto>
+
+                                        </div>
+                                        <div class="col-10">
+                                            <b>Industry Interaction & Consultancy Work</b><br>
+                                            <p>We possess Civil Consultancy Cell, Energy Management Cell & ASWDC which
+                                                provide a platform for students to enhance their technical & industrial
+                                                skills.<br><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-light">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="icons/6.png" alt="image" width="100%" height=auto>
+
+                                        </div>
+                                        <div class="col-10">
+                                            <b>Extra curricular</b><br>
+                                            <p>We provide a platform for the cultural fest Udaan (Annual day),
+                                                Thanganaat
+                                                (Navratri festival), Frolic (Technical Fest), Sprint (Annual Sports
+                                                week),
+                                                etc.<br>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <a
+                href="https://www.google.com/maps/place/Jaya+Prakash+Narayan+College+Of+Engineering/@16.6989138,77.9405422,15z/data=!4m5!3m4!1s0x0:0x4d9fe69a2ee40d0f!8m2!3d16.6989138!4d77.9405422 "><img
+                    width="100%" height=500px src="Assets/jpncemap.PNG"></a>
+
+        </section>
+        
+
+        <script>
+            const bg = document.getElementById('head');
+            window.addEventListener('scroll', function () {
+                bg.style.backgroundSize = 160 - +window.pageYOffset / 12 + '%';
+                bg.style.opacity = 1 - +window.pageYOffset / 700 + '';
+            })
+        </script>
+
+    
+</div>
+    <div id="footer"></div>
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
+
+
+</body>
+
+</html>
